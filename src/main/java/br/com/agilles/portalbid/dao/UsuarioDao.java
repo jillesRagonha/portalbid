@@ -13,7 +13,6 @@ public class UsuarioDao {
 
     public boolean login(Usuario u){
         boolean sucesso = false;
-        adiciona(u);
 
         EntityManager entityManager = new JPAUtil().getEntityManager();
         Query query = entityManager.createQuery("SELECT u from Usuario u where u.login = :pLogin and u.senha = :pSenha ");
@@ -24,13 +23,16 @@ public class UsuarioDao {
 
         return sucesso;
     }
-    public  void adiciona(Usuario usuario){
-        usuario.setLogin("Jilles");
-        usuario.setSenha("Ragonha");
+    public  boolean adiciona(Usuario usuario){
+        boolean salvo = false;
         EntityManager entityManager = new JPAUtil().getEntityManager();
         entityManager.getTransaction().begin();
         entityManager.persist(usuario);
         entityManager.getTransaction().commit();
         entityManager.close();
+
+        return salvo;
     }
+
+
 }

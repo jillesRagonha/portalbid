@@ -36,4 +36,8 @@ public class UsuarioMB implements Serializable {
     public boolean logar() {
         return dao.login(usuario);
     }
+
+    public boolean salvar(){
+        return dao.adiciona(usuario);
+    }
 }
