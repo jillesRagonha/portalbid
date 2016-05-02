@@ -7,6 +7,7 @@
     <groupId>br.com.agilles</groupId>
     <artifactId>portalbid</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <packaging>war</packaging>
 
     <dependencies>

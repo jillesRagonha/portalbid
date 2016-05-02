@@ -1,21 +1,151 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core"
-xmlns:p="http://primefaces.org/ui">
+<!DOCTYPE html>
+<html lang="pt-BR"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
 
-    <h:head>
-        <title>Teste de tgitutlo</title>
 
-    </h:head>
+<h:head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>#{msgs.TITULO}</title>
+
+
+    <link rel="shortcut icon" href="#{resource['imagens/bid_favicon.ico']}"/> <!--Maneira de puxar imagem usando jsf -->
+
+    <!-- fontes necessarias -->
+    <link href='//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'/>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'/>
+
+
+    <h:outputScript library="js" name="buttonToggle.83185c05.js"/>
+    <h:outputScript library="js" name="sectionMenu.e34acb2f.js"/>
+    <h:outputScript library="js" name="marked.44afe4a1.js"/>
+    <h:outputScript library="js" name="markdownEditor.cbe167a7.js"/>
+    <h:outputScript library="js" name="allowTabTextarea.9d214163.js"/>
+    <h:outputScript library="js" name="jquery-2.1.3.min.32015dd4.js"/>
+    <h:outputScript library="js" name="preventsDoubleClick.0a7a943f.js"/>
+    <h:outputScript library="js" name="assessment.c60eee6d.js"/>
+    <h:outputScript library="js" name="level.7e33ab93.js"/>
+    <h:outputScript library="js" name="login-form.b132a104.js"/>
+    <h:outputStylesheet library="css" name="login.css"/>
+
+    <!-- INSERIR GOOGLE ANALITICS AQUI
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-42101548-1', 'alura.com.br');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+    </script>    -->
+
+
+</h:head>
 
 <h:body>
-    <h:form>
-        <p:outputLabel value="Teste" />
-        <p:inputText placeholder="placeholder" />
-    </h:form>
+    <header class="header">
+
+        <div class="container">
+            <a href="#" class="header-logo">
+                <!-- LOGO EM JSF -->
+                <h:graphicImage library="imagens" name="logo-bid.png" alt="BID"/>
+                <!--<img src="imagens/bid_logo.jpg" alt="BID">    LOGOTIPO HTML -->
+            </a>
+        </div>
+
+    </header>
+
+    <div class="container">
+
+        <section class="container sign-container">
+
+            <!-- REGIAO DE CADASTRO -->
+
+            <div class="signup-invite">
+                <h3> #{msgs.LOGIN_TITULO}</h3>
+                <p>#{msgs.LOGIN_SUBTITULO}</p>
+
+                <p><a href="#">Cadastre-se aqui!</a></p>
+                <p></p>
+            </div>
+
+            <!-- REGIAO DE LOGIN -->
+
+            <div class="signin-form form-contact">
+
+                <h2 class="title">Já é cadastrado?</h2>
+                <p class="subtitle">Faça seu login conosco :)</p>
+
+
+                <h:form class="contact-form" id="form">
+
+
+                    <p:outputLabel value="Usuário" for="login-email"/>
+                    <p:inputText placeholder="Entre com seu email" requiredMessage="Preencha o campo" value="#{usuarioMB.usuario.login}" required="true"
+                                 styleClass="input fill-with-cached-email" id="login-email"/>
+                    <p:message display="text" for="login-email"/>
+
+                    <p:outputLabel value="Senha" for="senha"/>
+                    <p:password id="senha" styleClass="input" required="true" requiredMessage="Preencha o campo"
+                                placeholder="Entre com sua senha" value="#{usuarioMB.usuario.senha}"/>
+                    <p:message display="text" for="senha"/>
+
+
+                    <p:commandButton styleClass="buttonLight btn-login" ajax="false" value="Login" action="#{usuarioMB.logar}" update="form" />
+
+
+                    <!-- CODIGO PARA ENTRAR COM FACEBOOK SE FOR USAR UM DIA -->
+                    <!--<a href="https://www.facebook.com/dialog/oauth?client_id=1372822430&redirect_uri=https://portalbid.com/facebook/auth&scope=email,read_stream,user_likes&response_type=code" class=" btn-login btn-facebook-login">
+                    Entrar com Facebook  </a> -->
+
+                    <!-- CODIGO PARA INSERIR BOTAO RECUPERAR SENHA 01 -->
+
+                    <!-- <a class="forget-pass">
+                        Esqueci minha senha
+                    </a>-->
+
+                </h:form>
+            </div>
+            <!-- CODIGO PARA INSERIR BOTAO RECUPERAR SENHA 02-->
+
+            <!-- <div class="reminder-pass form-contact">
+                 <h2 class="title">Recuperar senha</h2>
+                 <p class="subtitle">Esqueceu sua senha? Digite seu e-mail que enviaremos um link para definir uma nova senha.</p>
+
+                 <form class="contact-form" action="/auth/sendPasswordRecoveryEmail" method="post">
+                     <label>E-mail</label>
+                     <input type="text" required placeholder="E-mail" id="email" name="email" class="input forgot-password-email" value=""/>
+                     <button class="button buttonLight" type="submit">
+                         Recuperar
+                     </button>
+                 </form>
+             </div> -->
+        </section>
+
+    </div>
+
+    <!-- RODAPÉ -->
+
+    <footer class="footer container">
+        <a href="#" class="footer-logo">
+            <p:graphicImage library="imagens" name="logo-bid.png" alt="Portal Bid"/>
+        </a>
+        <ul class="footer-menu">
+            <li class="footer-menu-item"><a href="#">Menu 01</a></li>
+            <li class="footer-menu-item"><a href="#">Menu 02</a></li>
+            <li class="footer-menu-item"><a href="#">Menu 03</a></li>
+            <li class="footer-menu-item"><a href="#">Menu 04</a></li>
+            <li class="footer-menu-item"><a href="#">Menu 05</a></li>
+            <li class="footer-menu-item"><a href="#">Menu 06</a></li>
+        </ul>
+    </footer>
+
+
+    <div class="levelUpNotification"></div>
+
+
 </h:body>
 </html>
