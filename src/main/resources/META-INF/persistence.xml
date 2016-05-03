@@ -4,6 +4,7 @@
         <class>br.com.agilles.portalbid.models.Endereco</class>
         <class>br.com.agilles.portalbid.models.Usuario</class>
         <class>br.com.agilles.portalbid.models.Nivel</class>
+        <class>br.com.agilles.portalbid.models.Lojista</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/portalbid" />

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+>
+
+<h:head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="icon" href="imagens/bid_favicon.ico"/>
+
+    <h:outputStylesheet library="css" name="reset.css"/>
+    <h:outputStylesheet library="css" name="base.css"/>
+    <h:outputStylesheet library="css" name="cadastro.css"/>
+
+    <title>BID | Cadastro</title>
+
+
+</h:head>
+
+<h:body>
+
+    <!-- CABEÇALHO VAI AQUI -->
+
+
+    <!-- CABECALHO DA PAGINA -->
+    <div id="interface"> <!-- DIV PRINCIPAL CONTAINER DA PAGINA TODA -->
+
+        <!-- CABECALHO DA PAGINA -->
+
+        <header id="cabecalho">
+
+            <h1 class="logo">
+                <p:graphicImage library="imagens" name="bid_logo_peq.jpg" alt="portal Bid"/>
+                <!--<img src="imagens/bid_logo_peq.jpg" alt="portal Bid"/>-->
+            </h1>
+
+            <h1 class="frase">Sua vitrine virtual em tempo real</h1>
+
+
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ul>
+                    <li><a href="login.html">Login</a></li>
+                    <li id="separador">;|;</li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+
+            </nav>
+
+
+            <!--<div id="clearfix"></div>-->
+
+        </header>
+
+        <!-- FIM CABECALHO -->
+
+        <section class="texto-destaque cadastro">
+
+            <h2>Aproveite melhor as oportunidades de compras, economizando tempo e dinheiro!</h2>
+            <p id="frase_cadastro">Cadastro de Lojista.</p>
+
+        </section>
+
+
+        <section id="formulario">
+
+            <h:form id="fCadastro"> <!-- formulario geral -->
+
+
+                <fieldset class="forma"> <!-- Seção de identificação do usuario-->
+
+                    <legend class="identificacao">Identificação do usuário</legend>
+
+                    <p class="espacamento">
+                        <label class="formatacao" for="cNome">Nome:</label>
+
+                        <p:inputText id="cNome" size="30" placeholder="Digite seu nome" value="#{lojistaMB.lojista.nomeLojista}"/>
+                        <!--<input type="text" name="tNome" id="cNome" size="30" placeholder="Nome completo"/>-->
+                    </p>
+
+                    <fieldset class="espacamento" id="usuario2">
+
+                        <legend class="espacamento" id="pessoa">Pessoa Física ou Juridica?</legend>
+                        <h:panelGrid columns="2" style="margin-bottom: 10px" cellpadding="1" >
+                            <p:selectOneRadio id="radio" value="#{lojistaMB.lojista.documento}" >
+                                <f:selectItem itemLabel="CPF" itemValue="cpf" />
+                                <f:selectItem itemLabel="CNPJ" itemValue="cnpj" />
+                            </p:selectOneRadio>
+                        </h:panelGrid>
+
+                        <!--<input type="radio" name="tJur" id="cJur"/>-->
+                        <!--<label for="cJur">Pessoa Juridica</label><br/>-->
+                        <!--<input type="radio" name="tJur" id="cFis"/>-->
+                        <!--<label for="cFis">Pessoa Física</label>-->
+
+                    </fieldset>
+
+                    <p><label id="cnpj" for="cDoc">CNPJ ou CPF:</label>
+                        <p:inputText value="#{lojistaMB.lojista.documento}" id="cDoc" required="true" /></p>
+                        <!--<input type="TEXT" name="tDoc" id="cDoc" size="16" placeholder="CNPJ ou CPF"/>-->
+
+                </fieldset>
+
+                <fieldset class="forma espacamento"> <!-- Seção de endereços-->
+
+
+                    <legend class="identificacao">Endereço</legend>
+
+                    <p class="espacamento">
+                        <label class="formatacao" for="cRua"> Logradouro:</label>
+                        <p:inputText value="#{lojistaMB.endereco.logradouro}" id="cRua" />
+                        <!--<input type="text" name="tRua" id="cRua" placeholder="Rua, Avenida, Travessa..." size="40"
+                        maxlength="80"/>-->
+                    </p>
+                    <p class="espacamento"><label class="formatacao" for="cNum"> Numero:</label>
+                        <input type="number" name="tNum" id="cNum" min="0" max="99999"/>
+                    </p>
+                    <p class="espacamento"><label class="formatacao" for="cBairro"> Bairro: </label>
+                        <input type="text" name="tBairro" id="cBairro" placeholder="Bairro, Condominio, Conjunto...."
+                               size="40" maxlength="80"/>
+                    </p>
+                    <p class="espacamento"><label class="formatacao" for="cCEP"> CEP: </label>
+                        <input type="number" name="tCEP" id="cCEP" min="8" max="10" placeholder="99999 999"/>
+                    </p>
+                    <p class="espacamento"><label class="formatacao" for="cEstado"> Estado</label>
+                        <select name="tEstado" id="cEstado">
+                            <option>Rio de Janeiro</option>
+                            <option>São Paulo</option>
+                            <option>Rio Grande do Sul</option>
+                            <option>Acre</option>
+                        </select></p>
+                    <p><label class="formatacao" for="cCid">Cidade: </label><input type="text" name="tCid" id="cCid"
+                                                                                   maxlength="40"
+                                                                                   placeholder="Sua cidade"/>
+                    </p>
+
+                </fieldset>
+
+                <fieldset class="forma"> <!-- Seção de informações de contato-->
+
+                    <legend class="identificacao">Informações de contato</legend>
+
+                    <p class="espacamento"><label class="formatacao" for="cTel">Telefone Comercial: </label> <input
+                            type="tel" name="tTel" id="cTel" placeholder="Telefone comercial"/></p>
+                    <p class="espacamento"><label class="formatacao"
+                                                  for="cNome_resp">Nome do responsável: </label><input
+                            type="text" name="tNome_resp" id="cNome_resp" size="30" placeholder="Nome do responsável"/>
+                    </p>
+                    <p class="espacamento"><label class="formatacao" for="cTel_resp">Telefone do responsável: </label>
+                        <input type="tel" name="tTel_resp" id="cTel_resp" placeholder="Seu telefone"/></p>
+                    <!--<p class="espacamento"><label class="formatacao" for="cCel_resp">Celular do responsável: </label> <input type="tel" name="tCel_resp" id="cCel_resp" placeholder="Seu celular"></p>-->
+                    <p class="espacamento"><label class="formatacao" for="cMail">Email de contato: </label><input
+                            type="email" name="tMail" id="cMail" placeholder="Insira seu email" size="20"/></p><br/>
+
+                </fieldset>
+
+                <fieldset class="forma"> <!-- Seção para acesso ao sistema-->
+
+                    <legend class="identificacao">Acesso ao sistema BID</legend>
+
+                    <p class="espacamento">
+                        <label class="formatacao" for="cUser">Cadastre seu login: </label>
+                        <input
+                                type="text" name="tUser" id="cUser" size="20" maxlength="30"
+                                placeholder="insira um nome de usuário"/></p>
+                    <p class="espacamento"><label class="formatacao" for="cSenha">Insira uma senha: </label> <input
+                            type="password" name="tSenha" id="cSenha" placeholder="Insira sua senha" size="15"
+                            maxlength="15"/></p>
+                    <p class="espacamento"><label class="formatacao" for="cSenha1">Repita a senha: </label><input
+                            type="password" name="tSenha1" id="cSenha1" placeholder="Repita sua senha" size="15"
+                            maxlength="15"/></p>
+
+                </fieldset>
+
+                <p class="botao_formulario">
+                    <p:commandButton value="Salvar" action="#{lojistaMB.cadastrar}" />
+                    <input type="reset" name="tLimpa" id="cLimpa" value="LIMPAR"/>
+                    <input type="submit" name="tEnvia" id="cEnvia" value="ENVIAR"/>
+                </p>
+
+            </h:form>
+
+        </section>
+
+    </div>
+
+    <!-- RODAPÉ AQUI -->
+</h:body>
+</html>

@@ -11,8 +11,10 @@ import javax.persistence.Id;
 @Entity
 public class Endereco {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    private String logradouro;
 
     public Integer getId() {
         return id;
@@ -20,5 +22,13 @@ public class Endereco {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
     }
 }

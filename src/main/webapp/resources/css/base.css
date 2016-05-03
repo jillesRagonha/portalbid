@@ -1,0 +1,217 @@
+@import url(https://fonts.googleapis.com/css?family=Catamaran);
+
+
+body{
+    font-family: 'Catamaran', sans-serif;
+}
+
+/* CONFIGURAÇÕES DO CONTAINER*/
+
+div#interface{
+    width: 100%;
+    margin: 0 auto 0 auto;
+    max-width: 2000px;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto 0 auto;
+
+}
+
+/* CONFIGURAÇOES DO CABEÇALHO */
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+.logo, .frase, nav#menu{
+
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.logo {
+    width: 10%;
+}
+
+.frase{
+    width: 60%;
+    padding-left: 0;
+}
+
+nav#menu{
+    width: 30%;
+}
+
+header#cabecalho {
+    height: 90px;
+    background-color:#eb1c24;
+    border-bottom: 1px black solid;
+
+}
+
+
+
+header#cabecalho h1{
+    font-family: 'Catamaran', sans-serif;
+    color:#ffffff;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    /*margin-top: 2.1875em;*/
+    /*margin-left: 2.5em;*/
+    /*float:left;*/
+
+}
+
+#clearfix{
+    clear: both;
+}
+
+
+
+/* FORMATAÇÃO MENU */
+
+
+
+nav#menu ul{
+    list-style: none;
+    position: absolute;
+    top:30px;
+    right: 100px;
+
+}
+nav#separador{
+    font-size: 25px;
+    font-weight: bold;
+}
+nav#menu li{
+    display: inline-block;
+    margin: 5px 2px;
+    padding: 7px;
+    transition: background-color 0.5s; /* tempo que demora para aparecer o background dos botoes login e cadastro */
+    -moz-transition: background-color 0.5s; /* mozilla firefox */
+    -o-transition: background-color 0.5s; /* Opera */
+    -webkit-transition: background-color 0.5s; /* google chrome */
+    -ms-transition: background-color 0.5s; /* internet explorer */
+}
+
+nav#menu a{
+    font-family: 'Catamaran', sans-serif;
+    color:#ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav#menu a:hover{
+    color: #ffffff;
+    text-decoration: underline;
+
+}
+
+nav#menu li:hover{
+    background-color: #d4dbdb;
+    border-radius: 5px;
+}
+
+nav#menu #separador{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+nav h1{
+    display: none;
+}
+
+/* FIM DAS CONFIG DO CABEÇALHO */
+
+.texto-destaque {
+
+    width: 100%;
+    clear: both;
+}
+
+.texto-destaque h2 {
+
+    font-family: 'Catamaran', sans-serif;
+    color: #eb1c24;
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 30px;
+    text-align: center;
+    margin-bottom: 200px;
+
+}
+
+.cadastro h2 {
+
+    margin-bottom: 50px;
+
+}
+
+main#principal{
+    display: block;
+    background-color: #00c86f;
+    height: 200px;
+}
+
+footer#rodape{
+    display: block;
+    background-color: #009bdd;
+    height: 200px;
+    width: 100%;
+}
+@media (max-width: 600px) {
+    #menu {
+        background: #f0f0f0;
+        padding: 1em;
+        margin: 0;
+
+        height: 100%;
+        width: 90%;
+        max-width: 320px;
+
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: -90%;
+
+        transition: left 0.3s ease-out;
+    }
+    .menu-ativo #menu.nav {
+        left: 0;
+    }
+
+    #menu li {
+        padding: 1em 0;
+        width: 100%;
+    }
+}
+@media not all and (max-width: 600px) {
+    .abre_menu,
+    .fecha_menu {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-ativo:after {
+        content: "";
+        display: block;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        background: rgba(0,0,0,0.4);
+    }
+}

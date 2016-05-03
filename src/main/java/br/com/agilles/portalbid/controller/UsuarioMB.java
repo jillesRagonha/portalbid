@@ -38,6 +38,6 @@ public class UsuarioMB implements Serializable {
     }
 
     public boolean salvar(){
-        return dao.adiciona(usuario);
+        return dao.salvar(usuario);
     }
 }

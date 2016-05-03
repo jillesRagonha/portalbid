@@ -1,9 +1,6 @@
 package br.com.agilles.portalbid.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by Jilles Ragonha on 02/05/2016.
@@ -16,6 +13,19 @@ public class Usuario {
 
     private String login, senha;
 
+    @Enumerated(EnumType.STRING)
+    private Nivel nivel;
+
+    @ManyToOne
+    private Lojista lojista;
+
+    public Nivel getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(Nivel nivel) {
+        this.nivel = nivel;
+    }
 
     public String getLogin() {
         return login;

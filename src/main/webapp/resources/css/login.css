@@ -20,7 +20,7 @@ body, input, select, textarea {
 
 img {
     max-width: 100%;
-    border: 0;
+    border: 0
 }
 
 ul {
@@ -222,10 +222,8 @@ body {
 }
 
 .header-logo, .header-logo img {
-    width: 8em;
-    min-height: 60px;
-    margin-right: 10px;
-
+    width: 6em;
+    min-height: 60px
 }
 
 [data-product=musicdot] .header-logo, [data-product=musicdot] .header-logo img {
@@ -233,8 +231,7 @@ body {
 }
 
 .header-logo {
-    margin-right: .5em;
-    margin: 8px;
+    margin-right: .5em
 }
 
 .header-menu {
@@ -283,7 +280,7 @@ body {
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 1.8em;
-    font-size: .9em;
+    font-size: .9 m
 }
 
 .header-submenu-item_iconDiscussions {
@@ -4329,7 +4326,6 @@ div#linechart_material div div {
         display: inline-block;
         vertical-align: middle
     }
-
 }
 
 .reminder-pass .subtitle, .reminder-pass .title, .sign-container .signin-form .subtitle, .sign-container .signin-form .title {
@@ -4537,14 +4533,12 @@ div#linechart_material div div {
     display: inline-block;
     font-size: 1em;
     height: 3em;
-    text-align: center !important;
     border-radius: 3px;
     font-weight: 600;
     min-width: 182px;
-    vertical-align: middle !important;
-    margin: 1%;
+    vertical-align: top;
+    margin: 1%
 }
-
 
 @media (min-width: 565px) {
     .btn-login {
@@ -4563,4 +4557,3 @@ div#linechart_material div div {
         width: auto
     }
 }
-
