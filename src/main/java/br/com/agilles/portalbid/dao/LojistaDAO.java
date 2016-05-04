@@ -23,15 +23,6 @@ public class LojistaDAO extends AbstractDAO<Lojista> {
         return salvo;
     }
 
-    public boolean salvarCompleto(Lojista lojista) {
-        boolean salvo = false;
-        EntityManager manager = new JPAUtil().getEntityManager();
-        manager.getTransaction().begin();
-        manager.persist(lojista);
-        manager.getTransaction().commit();
-        manager.close();
-        return salvo;
-    }
 
 
     public boolean remover(Lojista objeto) {

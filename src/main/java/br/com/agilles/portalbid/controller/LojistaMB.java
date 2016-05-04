@@ -50,7 +50,7 @@ public class LojistaMB {
     }
 
     public boolean cadastrar() {
-        lojista.setEndereco(endereco);
+
         return dao.salvar(lojista);
 
     }

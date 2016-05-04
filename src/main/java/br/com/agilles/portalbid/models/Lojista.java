@@ -1,7 +1,6 @@
 package br.com.agilles.portalbid.models;
 
 import javax.persistence.*;
-import java.util.List;
 
 /**
  * Created by Jilles Ragonha on 03/05/2016.
@@ -11,10 +10,7 @@ public class Lojista {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @OneToMany
-    private List<Usuario> usuarios;
-    @OneToMany
-    private List<Endereco> enderecos;
+
     private String nomeLojista;
     private String documento;
     private String telefoneComercial;
@@ -23,8 +19,10 @@ public class Lojista {
     private String login;
     private String senha;
 
-    @OneToOne
-    private Endereco endereco;
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    private Endereco endereco = new Endereco();
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    private Usuario usuario = new Usuario();
 
     public String getLogin() {
         return login;
@@ -66,21 +64,6 @@ public class Lojista {
         this.id = id;
     }
 
-    public List<Usuario> getUsuarios() {
-        return usuarios;
-    }
-
-    public void setUsuarios(List<Usuario> usuarios) {
-        this.usuarios = usuarios;
-    }
-
-    public List<Endereco> getEnderecos() {
-        return enderecos;
-    }
-
-    public void setEnderecos(List<Endereco> enderecos) {
-        this.enderecos = enderecos;
-    }
 
     public String getNomeLojista() {
         return nomeLojista;
@@ -112,5 +95,13 @@ public class Lojista {
 
     public void setTelefoneResidencial(String telefoneResidencial) {
         this.telefoneResidencial = telefoneResidencial;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }
