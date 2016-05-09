@@ -1,187 +1,347 @@
 <!DOCTYPE html>
-
-<html lang="pt-br"
+<html lang="pt-BR"
+      xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
->
+      xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <link rel="shortcut icon" href="#{resource['imagens/bid_favicon.ico']}"/>
-
-    <h:outputStylesheet library="css" name="reset.css"/>
-    <h:outputStylesheet library="css" name="base.css"/>
-    <h:outputStylesheet library="css" name="cadastro.css"/>
-
     <title>BID | Cadastro</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <h:outputStylesheet library="css" name="main.css"/>
+    <h:outputScript library="js" name="html5shiv.js"/>
+    <!--[if lte IE 8]>
 
 
+    <script src="js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/main.css"/>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/ie8.css"/><![endif]-->
 </h:head>
 
-<h:body>
+<h:body class="homepage">
 
-    <!-- CABEÇALHO VAI AQUI -->
+    <div id="page-wrapper">
 
+        <!-- Header -->
+        <div id="header-wrapper">
+            <header id="header" class="container">
 
-    <!-- CABECALHO DA PAGINA -->
-    <div id="interface"> <!-- DIV PRINCIPAL CONTAINER DA PAGINA TODA -->
+                <!-- Logo -->
+                <div id="logo">
+                    <h1><a href="index.html">BID</a></h1>
+                    <span>Compre nossos produtos aqui.</span>
+                </div>
 
-        <!-- CABECALHO DA PAGINA -->
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li class="current"><a href="index.html">Welcome</a></li>
+                        <li>
+                            <a href="#">Dropdown</a>
+                            <ul>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Magna phasellus</a></li>
+                                <li>
+                                    <a href="#">Phasellus consequat</a>
+                                    <ul>
+                                        <li><a href="#">Lorem ipsum dolor</a></li>
+                                        <li><a href="#">Phasellus consequat</a></li>
+                                        <li><a href="#">Magna phasellus</a></li>
+                                        <li><a href="#">Etiam dolore nisl</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Veroeros feugiat</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="left-sidebar.html">Left Sidebar</a></li>
+                        <li><a href="right-sidebar.html">Right Sidebar</a></li>
+                        <li><a href="no-sidebar.html">No Sidebar</a></li>
+                    </ul>
+                </nav>
 
-        <header id="cabecalho">
+            </header>
+        </div>
 
-            <h1 class="logo">
-                <p:graphicImage library="imagens" name="bid_logo_peq.jpg" alt="portal Bid"/>
-                <!--<img src="imagens/bid_logo_peq.jpg" alt="portal Bid"/>-->
-            </h1>
+        <h:form id="infoLojista">
+            <!-- Banner cadastro-->
+            <div id="banner-wrapper">
+                <div id="banner" class="box container">
+                    <div class="row">
 
-            <h1 class="frase">Sua vitrine virtual em tempo real</h1>
+                        <div class="7u 12u(medium)">
 
+                            <p:inputText id="nome" placeholder="Nome ou Razão Social do Estabelecimento"
+                                         required="true"/>
+                            <p:message for="nome" display="icon"/>
+                            <p:outputLabel value="" />
 
-            <nav id="menu">
-                <h1>Menu Principal</h1>
-                <ul>
-                    <li><p:link value="Login" outcome="LOGIN"/></li>
-                    <!--<li><a href="login.html">Login</a></li>-->
-                    <li/>
-                    <li><p:link value="Cadastro" outcome="CADASTRO"/></li>
-                    <!--<li><a href="cadastro.html">Cadastro</a></li>-->
-                </ul>
+                            <p:inputMask mask="99999999999" id="documento" placeholder="Documentação (CNPJ ou CPF)"
+                                         required="true" />
+                            <p:message for="documento" display="icon"/>
+                            <p:outputLabel value="" />
+                            <p:inputMask mask="(99)9999-9999" id="telefone" placeholder="Telefone FIXO de contato"
+                                         required="true"/>
+                            <p:message for="telefone" display="icon"/>
 
-            </nav>
+                        </div>
 
+                        <div class="5u 12u(medium)">
+                            <p:inputText id="contato" placeholder="Nome do Responsável"
+                                         required="true"/>
+                            <p:message for="contato" display="icon"/>
+                            <p:outputLabel value="" />
+                            <p:inputMask mask="(99)9999-99999" id="celular" placeholder="Telefone Celular de contato"
+                                         required="true"/>
+                            <p:message for="celular" display="icon"/>
 
-            <!--<div id="clearfix"></div>-->
-
-        </header>
-
-        <!-- FIM CABECALHO -->
-
-        <section class="texto-destaque cadastro">
-
-            <h2>Aproveite melhor as oportunidades de compras, economizando tempo e dinheiro!</h2>
-            <p id="frase_cadastro">Cadastro de Lojista.</p>
-
-        </section>
-
-
-        <section id="formulario">
-
-            <h:form id="fCadastro"> <!-- formulario geral -->
-
-
-                <fieldset class="forma"> <!-- Seção de identificação do usuario-->
-
-                    <legend class="identificacao">Identificação do usuário</legend>
-
-                    <p class="espacamento">
-                        <p:outputLabel value="Nome: " for="cNome" styleClass="formatacao"/>
-                        <p:inputText id="cNome" required="true" size="30"
-                                     placeholder="Digite seu nome" value="#{lojistaMB.lojista.nomeLojista}"/>
-                        <p:message for="cNome" styleClass="espacamento" display="icon"/>
-                    </p>
-
-                    <p class="espacamento">
-                        <p:outputLabel value="Documento" for="cDoc" styleClass="formatacao"/>
-                        <p:inputText value="#{lojistaMB.lojista.documento}" placeholder="CPF ou CNPJ" id="cDoc"
-                                     requiredMessage="Campo Obrigatório" required="true"  title="Digite apenas números"/>
-                        <p:message styleClass="espacamento" for="cDoc"/>
-                    </p>
-
-                </fieldset>
-
-                <fieldset class="forma espacamento"> <!-- Seção de endereços-->
-
-
-                    <legend class="identificacao">Endereço</legend>
-
-                    <p>
-                        <p:outputLabel styleClass="formatacao" for="cRua" value="Logradouro"/>
-                        <p:inputText value="#{lojistaMB.lojista.endereco.logradouro}" id="cRua" required="true"
-                                     size="50"/>
-                        <p:message for="cRua" display="icon"/>
-                    </p>
-
-
-                    <p class="espacamento">
-                        <p:outputLabel value="Número" for="cNum" styleClass="formatacao"/>
-                        <p:inputText value="#{lojistaMB.lojista.endereco.numero}" id="cNum" required="true"/>
-                        <p:message for="cNum" display="icon"/>
-
-                    </p>
-                    <p class="espacamento">
-                        <p:outputLabel value="Bairro" styleClass="formatacao" for="cBairro"/>
-                        <p:inputText value="#{lojistaMB.lojista.endereco.bairro}" required="true" id="cBairro"/>
-                        <p:message display="icon" for="cBairro"/>
-                    </p>
-
-                    <p class="espacamento">
-                        <p:outputLabel value="CEP" styleClass="formatacao" for="cCep"/>
-                        <p:inputText value="#{lojistaMB.lojista.endereco.cep}" id="cCep" required="true"/>
-                        <p:message display="icon" for="cCep"/>
-                    </p>
-
-                    <p class="espacamento">
-                        <p:outputLabel styleClass="formatacao" value="Cidade" for="cCidade"/>
-                        <p:inputText value="#{lojistaMB.lojista.endereco.cidade}" required="true" id="cCidade"/>
-                        <p:message display="icon" for="cCidade"/>
-
-                    </p>
-
-                </fieldset>
-
-                <fieldset class="forma"> <!-- Seção de informações de contato-->
-
-                    <legend class="identificacao">Informações de contato</legend>
-
-                    <p class="espacamento">
-                        <p:outputLabel value="Telefone Comercial" for="cTel" />
-                        <p:inputText value="#{lojistaMB.lojista.telefoneComercial}" required="true" id="cTel" />
-                    </p>
-                    <p class="espacamento"><label class="formatacao"
-                                                  for="cNome_resp">Nome do responsável: </label><input
-                            type="text" name="tNome_resp" id="cNome_resp" size="30" placeholder="Nome do responsável"/>
-                    </p>
-                    <p class="espacamento"><label class="formatacao" for="cTel_resp">Telefone do responsável: </label>
-                        <input type="tel" name="tTel_resp" id="cTel_resp" placeholder="Seu telefone"/></p>
-                    <!--<p class="espacamento"><label class="formatacao" for="cCel_resp">Celular do responsável: </label> <input type="tel" name="tCel_resp" id="cCel_resp" placeholder="Seu celular"></p>-->
-                    <p class="espacamento"><label class="formatacao" for="cMail">Email de contato: </label><input
-                            type="email" name="tMail" id="cMail" placeholder="Insira seu email" size="20"/></p><br/>
-
-                </fieldset>
-
-                <fieldset class="forma"> <!-- Seção para acesso ao sistema-->
-
-                    <legend class="identificacao">Acesso ao sistema BID</legend>
-
-                    <p class="espacamento">
-                        <label class="formatacao" for="cUser">Cadastre seu login: </label>
-                        <input type="text" name="tUser" id="cUser" size="20" maxlength="30"
-                               placeholder="insira um nome de usuário"/></p>
-                    <p class="espacamento"><label class="formatacao" for="cSenha">Insira uma senha: </label> <input
-                            type="password" name="tSenha" id="cSenha" placeholder="Insira sua senha" size="15"
-                            maxlength="15"/></p>
-                    <p class="espacamento"><label class="formatacao" for="cSenha1">Repita a senha: </label><input
-                            type="password" name="tSenha1" id="cSenha1" placeholder="Repita sua senha" size="15"
-                            maxlength="15"/></p>
-
-                </fieldset>
-
-                <p class="botao_formulario">
-                    <p:commandButton value="Salvar" action="#{lojistaMB.cadastrar}" update="fCadastro"/>
-                    <p:commandButton value="Limpar" update="fCadastro">
-                        <p:resetInput target="fCadastro"/>
-                    </p:commandButton>
-
-                </p>
-
-            </h:form>
-
-        </section>
-
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </h:form>
     </div>
 
-    <!-- RODAPÉ AQUI -->
+    <div id="banner-wrapper">
+        <h:form id="formEndereco">
+            <div id="banner" class="box container">
+                <div class="row">
+                    <div class="7u 12u(medium)">
+                        <p:inputText id="logradouro" placeholder="Logradouro (Rua, Avenida etc...)"
+                                     required="true"/>
+                        <p:message for="logradouro" display="icon"/>
+                        <p:outputLabel value="" />
+                        <p:inputText id="contato" placeholder="Nome do Responsável"
+                                     required="true"/>
+                        <p:message for="contato" display="icon"/>
+                        <p:outputLabel value="" />
+                        <p:inputText id="contato" placeholder="Nome do Responsável"
+                                     required="true"/>
+                        <p:message for="contato" display="icon"/>
+                        <p:outputLabel value="" />
+
+                    </div>
+                    <div class="5u 12u(medium)">
+
+                    </div>
+                </div>
+            </div>
+        </h:form>
+    </div>
+
+    <div id="banner-wrapper">
+        <div id="banner" class="box container">
+            <div class="row">
+                <div class="7u 12u(medium)">
+
+                    <p>conteudo aqui</p>
+                </div>
+                <div class="5u 12u(medium)">
+                    <p>conteudo aqui</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div id="features-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="4u 12u(medium)">
+
+                    <!-- Box -->
+                    <section class="box feature">
+                        <a href="#" class="image featured"><img src="images/pic01.jpg" alt=""/></a>
+                        <div class="inner">
+                            <header>
+                                <h2>Put something here</h2>
+                                <p>Maybe here as well I think</p>
+                            </header>
+                            <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
+                        </div>
+                    </section>
+
+                </div>
+                <div class="4u 12u(medium)">
+
+                    <!-- Box -->
+                    <section class="box feature">
+                        <a href="#" class="image featured"><img src="images/pic02.jpg" alt=""/></a>
+                        <div class="inner">
+                            <header>
+                                <h2>An interesting title</h2>
+                                <p>This is also an interesting subtitle</p>
+                            </header>
+                            <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
+                        </div>
+                    </section>
+
+                </div>
+                <div class="4u 12u(medium)">
+
+                    <!-- Box -->
+                    <section class="box feature">
+                        <a href="#" class="image featured"><img src="images/pic03.jpg" alt=""/></a>
+                        <div class="inner">
+                            <header>
+                                <h2>Oh, and finally ...</h2>
+                                <p>Here's another intriguing subtitle</p>
+                            </header>
+                            <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div id="main-wrapper">
+        <div class="container">
+            <div class="row 200%">
+                <div class="4u 12u(medium)">
+
+                    <!-- Sidebar -->
+                    <div id="sidebar">
+                        <section class="widget thumbnails">
+                            <h3>Interesting stuff</h3>
+                            <div class="grid">
+                                <div class="row 50%">
+                                    <div class="6u">
+                                        <a href="#" class="image fit">
+                                            <img src="images/pic04.jpg" alt=""/>
+                                        </a>
+                                    </div>
+                                    <div class="6u"><a href="#" class="image fit"><img src="images/pic05.jpg"
+                                                                                       alt=""/></a>
+                                    </div>
+                                    <div class="6u"><a href="#" class="image fit"><img src="images/pic06.jpg"
+                                                                                       alt=""/></a>
+                                    </div>
+                                    <div class="6u"><a href="#" class="image fit"><img src="images/pic07.jpg"
+                                                                                       alt=""/></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="button icon fa-file-text-o">More</a>
+                        </section>
+                    </div>
+
+                </div>
+                <div class="8u 12u(medium) important(medium)">
+
+                    <!-- Content -->
+                    <div id="content">
+                        <section class="last">
+                            <h2>So what's this all about?</h2>
+                            <p>This is <strong>Verti</strong>, a free and fully responsive HTML5 site template by <a
+                                    href="http://html5up.net">HTML5 UP</a>.
+                                Verti is released under the <a
+                                        href="http://html5up.net/license">Creative Commons Attribution license</a>, so feel free to use it for any personal or commercial project you might have going on (just don't forget to credit us for the design!)
+                            </p>
+                            <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper bibendum ipsum, et tristique augue fringilla eu. Vivamus id risus vel dolor auctor euismod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. Aliquam luctus mattis lectus sit amet phasellus quam turpis.</p>
+                            <a href="#" class="button icon fa-arrow-circle-right">Continue Reading</a>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-wrapper">
+        <footer id="footer" class="container">
+            <div class="row">
+                <div class="3u 6u(medium) 12u$(small)">
+
+                    <!-- Links -->
+                    <section class="widget links">
+                        <h3>Random Stuff</h3>
+                        <ul class="style2">
+                            <li><a href="#">Etiam feugiat condimentum</a></li>
+                            <li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+                            <li><a href="#">Sed porttitor cras in erat nec</a></li>
+                            <li><a href="#">Felis varius pellentesque potenti</a></li>
+                            <li><a href="#">Nullam scelerisque blandit leo</a></li>
+                        </ul>
+                    </section>
+
+                </div>
+                <div class="3u 6u$(medium) 12u$(small)">
+
+                    <!-- Links -->
+                    <section class="widget links">
+                        <h3>Random Stuff</h3>
+                        <ul class="style2">
+                            <li><a href="#">Etiam feugiat condimentum</a></li>
+                            <li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+                            <li><a href="#">Sed porttitor cras in erat nec</a></li>
+                            <li><a href="#">Felis varius pellentesque potenti</a></li>
+                            <li><a href="#">Nullam scelerisque blandit leo</a></li>
+                        </ul>
+                    </section>
+
+                </div>
+                <div class="3u 6u(medium) 12u$(small)">
+
+                    <!-- Links -->
+                    <section class="widget links">
+                        <h3>Random Stuff</h3>
+                        <ul class="style2">
+                            <li><a href="#">Etiam feugiat condimentum</a></li>
+                            <li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+                            <li><a href="#">Sed porttitor cras in erat nec</a></li>
+                            <li><a href="#">Felis varius pellentesque potenti</a></li>
+                            <li><a href="#">Nullam scelerisque blandit leo</a></li>
+                        </ul>
+                    </section>
+
+                </div>
+                <div class="3u 6u$(medium) 12u$(small)">
+
+                    <!-- Contact -->
+                    <section class="widget contact last">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                            <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                            <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+                            <li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+                        </ul>
+                        <p>1234 Fictional Road<br/>
+                            Nashville, TN 00000<br/>
+                            (800) 555-0000</p>
+                    </section>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="12u">
+                    <div id="copyright">
+                        <ul class="menu">
+                            <li> Untitled. All rights reserved</li>
+                            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- Scripts -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/util.js"></script>
+    <!--[if lte IE 8]>
+    <script src="js/ie/respond.min.js"></script><![endif]-->
+    <script src="js/main.js"></script>
+
 </h:body>
 </html>

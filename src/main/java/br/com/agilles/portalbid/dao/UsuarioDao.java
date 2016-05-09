@@ -13,6 +13,7 @@ import java.util.List;
 public class UsuarioDao extends AbstractDAO<Usuario> {
 
     EntityManager entityManager = new JPAUtil().getEntityManager();
+
     public boolean salvar(Usuario objeto) {
         boolean salvo = false;
         entityManager.getTransaction().begin();
@@ -40,7 +41,7 @@ public class UsuarioDao extends AbstractDAO<Usuario> {
         return null;
     }
 
-    public boolean login(Usuario u){
+    public boolean login(Usuario u) {
         boolean sucesso = false;
 
         Query query = entityManager.createQuery("SELECT u from Usuario u where u.login = :pLogin and u.senha = :pSenha ");
@@ -51,7 +52,6 @@ public class UsuarioDao extends AbstractDAO<Usuario> {
 
         return sucesso;
     }
-
 
 
 }
