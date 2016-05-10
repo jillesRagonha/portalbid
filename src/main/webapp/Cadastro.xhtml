@@ -75,12 +75,12 @@
                             <p:inputText id="nome" placeholder="Nome ou Razão Social do Estabelecimento"
                                          required="true"/>
                             <p:message for="nome" display="icon"/>
-                            <p:outputLabel value="" />
+                            <p:outputLabel value=""/>
 
                             <p:inputMask mask="99999999999" id="documento" placeholder="Documentação (CNPJ ou CPF)"
-                                         required="true" />
+                                         required="true"/>
                             <p:message for="documento" display="icon"/>
-                            <p:outputLabel value="" />
+                            <p:outputLabel value=""/>
                             <p:inputMask mask="(99)9999-9999" id="telefone" placeholder="Telefone FIXO de contato"
                                          required="true"/>
                             <p:message for="telefone" display="icon"/>
@@ -91,7 +91,7 @@
                             <p:inputText id="contato" placeholder="Nome do Responsável"
                                          required="true"/>
                             <p:message for="contato" display="icon"/>
-                            <p:outputLabel value="" />
+                            <p:outputLabel value=""/>
                             <p:inputMask mask="(99)9999-99999" id="celular" placeholder="Telefone Celular de contato"
                                          required="true"/>
                             <p:message for="celular" display="icon"/>
@@ -106,24 +106,28 @@
     <div id="banner-wrapper">
         <h:form id="formEndereco">
             <div id="banner" class="box container">
+
                 <div class="row">
                     <div class="7u 12u(medium)">
-                        <p:inputText id="logradouro" placeholder="Logradouro (Rua, Avenida etc...)"
-                                     required="true"/>
+                        <p:inputText id="logradouro" placeholder="Logradouro (Rua, Avenida etc...)" required="true"/>
                         <p:message for="logradouro" display="icon"/>
-                        <p:outputLabel value="" />
-                        <p:inputText id="contato" placeholder="Nome do Responsável"
-                                     required="true"/>
-                        <p:message for="contato" display="icon"/>
-                        <p:outputLabel value="" />
-                        <p:inputText id="contato" placeholder="Nome do Responsável"
-                                     required="true"/>
-                        <p:message for="contato" display="icon"/>
-                        <p:outputLabel value="" />
+                        <p:outputLabel value=""/>
+                        <p:inputText id="bairro" placeholder="Bairro" required="true"/>
+                        <p:message for="bairro" display="icon"/>
+                        <p:outputLabel value=""/>
+                        <p:inputText id="CEP" placeholder="Endereço Postal" required="true"/>
+                        <p:message for="CEP" display="icon"/>
+                        <p:outputLabel value=""/>
 
                     </div>
                     <div class="5u 12u(medium)">
 
+                        <p:inputText id="numero" placeholder="Número do local" required="true"/>
+                        <p:message for="numero" display="icon"/>
+                        <p:outputLabel value=""/>
+                        <p:inputText id="cidade" placeholder="Cidade" required="true"/>
+                        <p:message for="cidade" display="icon"/>
+                        <p:outputLabel value=""/>
                     </div>
                 </div>
             </div>
@@ -131,17 +135,38 @@
     </div>
 
     <div id="banner-wrapper">
-        <div id="banner" class="box container">
-            <div class="row">
-                <div class="7u 12u(medium)">
+        <h:form id="form_usuarios">
+            <div id="banner" class="box container">
+                <div class="row">
 
-                    <p>conteudo aqui</p>
-                </div>
-                <div class="5u 12u(medium)">
-                    <p>conteudo aqui</p>
+                    <div class="7u 12u(medium)">
+                        <p:inputText placeholder="Nome Completo" required="true"
+                                     id="user"/>
+                        <p:message for="user" display="icon"/>
+                        <p:outputLabel value=""/>
+                        <p:inputText placeholder="E-mail (Será usado para acessar o sistema BID)" required="true"
+                                     id="email"/>
+                        <p:message for="email" display="icon"/>
+                        <p:outputLabel value=""/>
+
+                    </div>
+                    <div class="5u 12u(medium)">
+                        <p:password placeholder="Cadastre uma senha para acesso ao sistema" id="senha1" required="true"
+                                    feedback="true" goodLabel="Esta senha é boa!" weakLabel="Senha Fraca, tem certeza?"
+                                    strongLabel="Excelente escolha de senha!"/>
+                        <p:message for="senha1" display="icon"/>
+                        <p:outputLabel value=""/>
+
+                        <p:password match="senha1" id="senha2" required="true" placeholder="Repita a senha"/>
+                        <p:outputLabel value=""/>
+                        <p:commandButton value="Cadastrar-se"/>
+                    </div>
+
+
                 </div>
             </div>
-        </div>
+
+        </h:form>
     </div>
 
     <!-- Features -->
