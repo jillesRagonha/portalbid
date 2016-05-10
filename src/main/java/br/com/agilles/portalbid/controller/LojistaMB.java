@@ -1,7 +1,9 @@
 package br.com.agilles.portalbid.controller;
 
 import br.com.agilles.portalbid.dao.LojistaDAO;
+import br.com.agilles.portalbid.models.Endereco;
 import br.com.agilles.portalbid.models.Lojista;
+import br.com.agilles.portalbid.models.Usuario;
 
 import javax.faces.bean.ManagedBean;
 
@@ -12,8 +14,25 @@ import javax.faces.bean.ManagedBean;
 public class LojistaMB {
 
     private Lojista lojista = new Lojista();
+    private Endereco endereco = new Endereco();
+    private Usuario usuario = new Usuario();
     private LojistaDAO dao = new LojistaDAO();
 
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 
     public Lojista getLojista() {
         return lojista;
@@ -31,10 +50,11 @@ public class LojistaMB {
         this.dao = dao;
     }
 
-    public boolean cadastrar() {
-
-        return dao.salvar(lojista);
-
+    public String cadastrar() {
+        lojista.setUsuario(usuario);
+        lojista.setEndereco(endereco);
+        dao.salvar(lojista);
+        return "Login";
     }
 
 

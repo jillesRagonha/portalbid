@@ -18,11 +18,19 @@ public class Lojista {
     private String celular;
     private String login;
     private String senha;
-
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    private String nomeResposavel;
+    @ManyToOne
     private Endereco endereco = new Endereco();
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne
     private Usuario usuario = new Usuario();
+
+    public String getNomeResposavel() {
+        return nomeResposavel;
+    }
+
+    public void setNomeResposavel(String nomeResposavel) {
+        this.nomeResposavel = nomeResposavel;
+    }
 
     public String getLogin() {
         return login;

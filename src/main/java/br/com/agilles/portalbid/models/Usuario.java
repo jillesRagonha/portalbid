@@ -12,12 +12,20 @@ public class Usuario {
     private int id;
 
     private String login, senha;
-
+    private String nomeCompleto;
     @Enumerated(EnumType.STRING)
     private Nivel nivel;
 
-    @ManyToOne
-    private Lojista lojista;
+
+    public String getNomeCompleto() {
+        return nomeCompleto;
+    }
+
+    public void setNomeCompleto(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
+    }
+
+
 
     public Nivel getNivel() {
         return nivel;
