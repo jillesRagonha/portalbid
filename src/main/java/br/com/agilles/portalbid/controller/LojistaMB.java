@@ -6,12 +6,15 @@ import br.com.agilles.portalbid.models.Lojista;
 import br.com.agilles.portalbid.models.Usuario;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+import java.io.Serializable;
 
 /**
  * Created by Jilles Ragonha on 03/05/2016.
  */
 @ManagedBean
-public class LojistaMB {
+@RequestScoped
+public class LojistaMB implements Serializable{
 
     private Lojista lojista = new Lojista();
     private Endereco endereco = new Endereco();
@@ -50,7 +53,7 @@ public class LojistaMB {
         this.dao = dao;
     }
 
-    public String cadastrar() {
+    public String gravarUsuario() {
         lojista.setUsuario(usuario);
         lojista.setEndereco(endereco);
         dao.salvar(lojista);

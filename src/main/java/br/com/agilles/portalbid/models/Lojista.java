@@ -19,9 +19,9 @@ public class Lojista {
     private String login;
     private String senha;
     private String nomeResposavel;
-    @ManyToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Endereco endereco = new Endereco();
-    @ManyToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Usuario usuario = new Usuario();
 
     public String getNomeResposavel() {

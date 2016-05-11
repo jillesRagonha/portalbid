@@ -3,7 +3,8 @@
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:f="http://java.sun.com/jsf/core"
+>
 
 <h:head>
     <title>BID | Cadastro</title>
@@ -23,51 +24,52 @@
 
 <h:body class="homepage">
 
-    <h:form id="formCadastro">
-        <div id="page-wrapper">
 
-            <!-- Header -->
-            <div id="header-wrapper">
-                <header id="header" class="container">
+    <div id="page-wrapper">
 
-                    <!-- Logo -->
-                    <div id="logo">
-                        <h1><a href="index.html">BID</a></h1>
-                        <span>Compre nossos produtos aqui.</span>
-                    </div>
+        <!-- Header -->
+        <div id="header-wrapper">
+            <header id="header" class="container">
 
-                    <!-- Nav -->
-                    <nav id="nav">
-                        <ul>
-                            <li class="current"><a href="index.html">Welcome</a></li>
-                            <li>
-                                <a href="#">Dropdown</a>
-                                <ul>
-                                    <li><a href="#">Lorem ipsum dolor</a></li>
-                                    <li><a href="#">Magna phasellus</a></li>
-                                    <li>
-                                        <a href="#">Phasellus consequat</a>
-                                        <ul>
-                                            <li><a href="#">Lorem ipsum dolor</a></li>
-                                            <li><a href="#">Phasellus consequat</a></li>
-                                            <li><a href="#">Magna phasellus</a></li>
-                                            <li><a href="#">Etiam dolore nisl</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Veroeros feugiat</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="left-sidebar.html">Left Sidebar</a></li>
-                            <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                            <li><a href="no-sidebar.html">No Sidebar</a></li>
-                        </ul>
-                    </nav>
+                <!-- Logo -->
+                <div id="logo">
+                    <h1><a href="index.html">BID</a></h1>
+                    <span>Compre nossos produtos aqui.</span>
+                </div>
 
-                </header>
-            </div>
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li class="current"><a href="index.html">Welcome</a></li>
+                        <li>
+                            <a href="#">Dropdown</a>
+                            <ul>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Magna phasellus</a></li>
+                                <li>
+                                    <a href="#">Phasellus consequat</a>
+                                    <ul>
+                                        <li><a href="#">Lorem ipsum dolor</a></li>
+                                        <li><a href="#">Phasellus consequat</a></li>
+                                        <li><a href="#">Magna phasellus</a></li>
+                                        <li><a href="#">Etiam dolore nisl</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Veroeros feugiat</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="left-sidebar.html">Left Sidebar</a></li>
+                        <li><a href="right-sidebar.html">Right Sidebar</a></li>
+                        <li><a href="no-sidebar.html">No Sidebar</a></li>
+                    </ul>
+                </nav>
+
+            </header>
+        </div>
 
 
-            <!-- Banner cadastro-->
+        <!-- Banner cadastro-->
+        <h:form id="formCadastro">
             <div id="banner-wrapper">
                 <div id="banner" class="box container">
                     <div class="row">
@@ -103,202 +105,87 @@
                                          requiredMessage="Campo de Preenchimento Obrigatório"
                                          value="#{lojistaMB.lojista.celular}" required="true"/>
                             <p:message for="celular"/>
+                            <p:outputLabel value=""/>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="banner-wrapper">
+                <div id="banner" class="box container">
+                    <div class="row">
+                        <div class="7u 12u(medium)">
+                            <p:inputText id="logradouro" value="#{lojistaMB.endereco.logradouro}"
+                                         requiredMessage="Campo de Preenchimento Obrigatório"
+                                         placeholder="Logradouro (Rua, Avenida etc...)" required="true"/>
+                            <p:message for="logradouro"/>
+                            <p:outputLabel value=""/>
+                            <p:inputText id="bairro" placeholder="Bairro" required="true"
+                                         requiredMessage="Campo de Preenchimento Obrigatório"
+                                         value="#{lojistaMB.endereco.bairro}"/>
+                            <p:message for="bairro"/>
+                            <p:outputLabel value=""/>
+                            <p:inputText id="CEP" placeholder="Endereço Postal" required="true"
+                                         value="#{lojistaMB.endereco.cep}"
+                                         requiredMessage="Campo de Preenchimento Obrigatório"/>
+                            <p:message for="CEP"/>
+                            <p:outputLabel value=""/>
+
+                        </div>
+                        <div class="5u 12u(medium)">
+
+                            <p:inputText id="numero" placeholder="Número do local" required="true"
+                                         requiredMessage="Campo de Preenchimento Obrigatório"
+                                         value="#{lojistaMB.endereco.numero}"/>
+                            <p:message for="numero"/>
+                            <p:outputLabel value=""/>
+                            <p:inputText id="cidade" placeholder="Cidade" required="true"
+                                         requiredMessage="Campo de Preenchimento Obrigatório"
+                                         value="#{lojistaMB.endereco.cidade}"/>
+                            <p:message for="cidade"/>
+                            <p:outputLabel value=""/>
 
                         </div>
                     </div>
                 </div>
             </div>
 
-        </div>
+            <div id="banner-wrapper">
+                <div id="banner" class="box container">
+                    <div class="row">
+                        <div class="7u 12u(medium)">
+                            <p:inputText placeholder="E-mail - será usado para acesso ao sistema BID" id="email"
+                                         value="#{lojistaMB.usuario.login}" required="true"
+                                         requiredMessage="Campo Obrigatório"/>
+                            <p:message for="email"/>
+                            <p:outputLabel value=""/>
 
-        <div id="banner-wrapper">
+                            <p:password value="#{lojistaMB.usuario.senha}" id="senha"
+                                        placeholder="Escolha sua senha para acesso ao Sistema BID"/>
+                            <p:message for="senha"/>
 
-            <div id="banner" class="box container">
 
-                <div class="row">
-                    <div class="7u 12u(medium)">
-                        <p:inputText id="logradouro" value="#{lojistaMB.endereco.logradouro}"
-                                     requiredMessage="Campo de Preenchimento Obrigatório"
-                                     placeholder="Logradouro (Rua, Avenida etc...)" required="true"/>
-                        <p:message for="logradouro"/>
-                        <p:outputLabel value=""/>
-                        <p:inputText id="bairro" placeholder="Bairro" required="true"
-                                     requiredMessage="Campo de Preenchimento Obrigatório"
-                                     value="#{lojistaMB.endereco.bairro}"/>
-                        <p:message for="bairro"/>
-                        <p:outputLabel value=""/>
-                        <p:inputText id="CEP" placeholder="Endereço Postal" required="true"
-                                     value="#{lojistaMB.endereco.cep}"
-                                     requiredMessage="Campo de Preenchimento Obrigatório"/>
-                        <p:message for="CEP"/>
-                        <p:outputLabel value=""/>
-
-                    </div>
-                    <div class="5u 12u(medium)">
-
-                        <p:inputText id="numero" placeholder="Número do local" required="true"
-                                     requiredMessage="Campo de Preenchimento Obrigatório"
-                                     value="#{lojistaMB.endereco.numero}"/>
-                        <p:message for="numero"/>
-                        <p:outputLabel value=""/>
-                        <p:inputText id="cidade" placeholder="Cidade" required="true"
-                                     requiredMessage="Campo de Preenchimento Obrigatório"
-                                     value="#{lojistaMB.endereco.cidade}"/>
-                        <p:message for="cidade"/>
-                        <p:outputLabel value=""/>
+                        </div>
+                        <div class="5u 12u(medium)">
+                            <h:commandButton action="#{lojistaMB.gravarUsuario}" value="Gravar">
+                                <f:ajax execute=":formCadastro" render="@form"/>
+                            </h:commandButton>
+                        </div>
                     </div>
                 </div>
             </div>
 
-        </div>
 
-        <div id="banner-wrapper">
-
-            <div id="banner" class="box container">
-                <div class="row">
-
-                    <div class="7u 12u(medium)">
-                        <p:inputText placeholder="Nome Completo" required="true"
-                                     value="#{lojistaMB.usuario.nomeCompleto}" id="user"/>
-                        <p:message for="user" display="icon"/>
-                        <p:outputLabel value=""/>
-                        <p:inputText placeholder="E-mail (Será usado para acessar o sistema BID)" required="true"
-                                     requiredMessage="Campo de Preenchimento Obrigatório"
-                                     id="email" value="#{lojistaMB.usuario.login}"/>
-                        <p:message for="email"/>
-                        <p:outputLabel value=""/>
-
-                    </div>
-                    <div class="5u 12u(medium)">
-                        <p:password placeholder="Cadastre uma senha para acesso ao sistema" id="senha1" required="true"
-                                    feedback="true" goodLabel="Esta senha é boa!" weakLabel="Senha Fraca, tem certeza?"
-                                    strongLabel="Excelente escolha de senha!" label="Password"
-                                    promptLabel="Digite uma senha" inline="true"
-                                    value="#{lojistaMB.usuario.senha}"/>
-                        <p:message for="senha1"/>
-                        <p:outputLabel value=""/>
-
-                        <p:password match="senha1" id="senha2" required="true" placeholder="Repita a senha"/>
-                        <p:outputLabel value=""/>
-                        <h:commandButton value="Cadastrar-se" action="#{lojistaMB.cadastrar}">
-                            <f:ajax execute="@form" render="@form" />
-                        </h:commandButton>
-                    </div>
+        </h:form>
 
 
-                </div>
-            </div>
-
-
-        </div>
-    </h:form>
-
-    <!-- Features -->
-    <div id="features-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="4u 12u(medium)">
-
-                    <!-- Box -->
-                    <section class="box feature">
-                        <a href="#" class="image featured"><img src="images/pic01.jpg" alt=""/></a>
-                        <div class="inner">
-                            <header>
-                                <h2>Put something here</h2>
-                                <p>Maybe here as well I think</p>
-                            </header>
-                            <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
-                        </div>
-                    </section>
-
-                </div>
-                <div class="4u 12u(medium)">
-
-                    <!-- Box -->
-                    <section class="box feature">
-                        <a href="#" class="image featured"><img src="images/pic02.jpg" alt=""/></a>
-                        <div class="inner">
-                            <header>
-                                <h2>An interesting title</h2>
-                                <p>This is also an interesting subtitle</p>
-                            </header>
-                            <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
-                        </div>
-                    </section>
-
-                </div>
-                <div class="4u 12u(medium)">
-
-                    <!-- Box -->
-                    <section class="box feature">
-                        <a href="#" class="image featured"><img src="images/pic03.jpg" alt=""/></a>
-                        <div class="inner">
-                            <header>
-                                <h2>Oh, and finally ...</h2>
-                                <p>Here's another intriguing subtitle</p>
-                            </header>
-                            <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
-                        </div>
-                    </section>
-
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- Main -->
-    <div id="main-wrapper">
-        <div class="container">
-            <div class="row 200%">
-                <div class="4u 12u(medium)">
 
-                    <!-- Sidebar -->
-                    <div id="sidebar">
-                        <section class="widget thumbnails">
-                            <h3>Interesting stuff</h3>
-                            <div class="grid">
-                                <div class="row 50%">
-                                    <div class="6u">
-                                        <a href="#" class="image fit">
-                                            <img src="images/pic04.jpg" alt=""/>
-                                        </a>
-                                    </div>
-                                    <div class="6u"><a href="#" class="image fit"><img src="images/pic05.jpg"
-                                                                                       alt=""/></a>
-                                    </div>
-                                    <div class="6u"><a href="#" class="image fit"><img src="images/pic06.jpg"
-                                                                                       alt=""/></a>
-                                    </div>
-                                    <div class="6u"><a href="#" class="image fit"><img src="images/pic07.jpg"
-                                                                                       alt=""/></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class="button icon fa-file-text-o">More</a>
-                        </section>
-                    </div>
-
-                </div>
-                <div class="8u 12u(medium) important(medium)">
-
-                    <!-- Content -->
-                    <div id="content">
-                        <section class="last">
-                            <h2>So what's this all about?</h2>
-                            <p>This is <strong>Verti</strong>, a free and fully responsive HTML5 site template by <a
-                                    href="http://html5up.net">HTML5 UP</a>.
-                                Verti is released under the <a
-                                        href="http://html5up.net/license">Creative Commons Attribution license</a>, so feel free to use it for any personal or commercial project you might have going on (just don't forget to credit us for the design!)
-                            </p>
-                            <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper bibendum ipsum, et tristique augue fringilla eu. Vivamus id risus vel dolor auctor euismod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. Aliquam luctus mattis lectus sit amet phasellus quam turpis.</p>
-                            <a href="#" class="button icon fa-arrow-circle-right">Continue Reading</a>
-                        </section>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <div id="footer-wrapper">
