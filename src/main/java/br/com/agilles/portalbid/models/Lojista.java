@@ -14,10 +14,7 @@ public class Lojista {
     private String nomeLojista;
     private String documento;
     private String telefoneComercial;
-    private String telefoneResidencial;
     private String celular;
-    private String login;
-    private String senha;
     private String nomeResposavel;
     @OneToOne(cascade = CascadeType.ALL)
     private Endereco endereco = new Endereco();
@@ -32,21 +29,6 @@ public class Lojista {
         this.nomeResposavel = nomeResposavel;
     }
 
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
 
     public Endereco getEndereco() {
         return endereco;
@@ -95,14 +77,6 @@ public class Lojista {
 
     public void setTelefoneComercial(String telefoneComercial) {
         this.telefoneComercial = telefoneComercial;
-    }
-
-    public String getTelefoneResidencial() {
-        return telefoneResidencial;
-    }
-
-    public void setTelefoneResidencial(String telefoneResidencial) {
-        this.telefoneResidencial = telefoneResidencial;
     }
 
     public Usuario getUsuario() {

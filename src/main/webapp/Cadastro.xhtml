@@ -170,9 +170,7 @@
 
                         </div>
                         <div class="5u 12u(medium)">
-                            <h:commandButton action="#{lojistaMB.gravarUsuario}" value="Gravar">
-                                <f:ajax execute=":formCadastro" render="@form"/>
-                            </h:commandButton>
+                            <p:commandButton action="#{lojistaMB.gravarUsuario}" value="Gravar" update=":formCadastro" process="@form" />
                         </div>
                     </div>
                 </div>
