@@ -3,19 +3,22 @@ package br.com.agilles.portalbid.controller;
 import br.com.agilles.portalbid.dao.UsuarioDao;
 import br.com.agilles.portalbid.models.Usuario;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
 import java.io.Serializable;
 
 /**
  * Created by Jilles Ragonha on 02/05/2016.
  */
-@ManagedBean
+@Named
 @RequestScoped
 public class UsuarioMB implements Serializable {
 
-    Usuario usuario = new Usuario();
-    UsuarioDao dao = new UsuarioDao();
+    @Inject
+    Usuario usuario;
+    @Inject
+    UsuarioDao dao;
 
     public Usuario getUsuario() {
         return usuario;
@@ -37,7 +40,7 @@ public class UsuarioMB implements Serializable {
         return dao.login(usuario);
     }
 
-    public boolean salvar(){
+    public boolean salvar() {
         return dao.salvar(usuario);
     }
 }
