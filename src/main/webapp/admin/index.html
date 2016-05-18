@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+
+    <meta charset="utf-8">
+
+    <title>BID | Sistema Administrativo</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Portal BID">
+
+    <meta name="author" content="Jean Ragonha e Jilles Ragonha">
+
+    <!-- Folhas de Estilo -->
+
+    <link id="bs-css" href="../../../../../../../Downloads/admin/css/bootstrap-cerulean.min.css" rel="stylesheet">
+    <link href="../../../../../../../Downloads/admin/css/charisma-app.css" rel="stylesheet">
+    <link href='../../../../../../../Downloads/admin/bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
+    <link href='../../../../../../../Downloads/admin/bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
+    <link href='../../../../../../../Downloads/admin/bower_components/chosen/chosen.min.css' rel='stylesheet'>
+    <link href='../../../../../../../Downloads/admin/bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
+    <link href='../../../../../../../Downloads/admin/bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
+    <link href='../../../../../../../Downloads/admin/bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='../../../../../../../Downloads/admin/css/jquery.noty.css' rel='stylesheet'>
+    <link href='../../../../../../../Downloads/admin/css/noty_theme_default.css' rel='stylesheet'>
+    <link href='../../../../../../../Downloads/admin/css/elfinder.min.css' rel='stylesheet'>
+    <link href='../../../../../../../Downloads/admin/css/elfinder.theme.css' rel='stylesheet'>
+    <link href='../../../../../../../Downloads/admin/css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='../../../../../../../Downloads/admin/css/uploadify.css' rel='stylesheet'>
+    <link href='../../../../../../../Downloads/admin/css/animate.min.css' rel='stylesheet'>
+
+    <!-- jQuery -->
+    <script src="../../../../../../../Downloads/admin/bower_components/jquery/jquery.min.js"></script>
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- icone -->
+    <link rel="shortcut icon" href="../../../../../../../Downloads/admin/img/bid_favicon.ico">
+
+</head>
+
+<body>
+
+<!-- inicio barra superior -->
+
+<div class="navbar navbar-default" role="navigation">
+
+    <div class="navbar-inner">
+        <button type="button" class="navbar-toggle pull-left animated flip">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"> <img alt="BID Logo" src="../../../../../../../Downloads/admin/img/bid_logo_peq.jpg" class="hidden-xs"/>
+            <span>BID Admin</span></a>
+
+        <!-- menu de admin / perfil e logout -->
+
+        <div class="btn-group pull-right">
+            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <i class="glyphicon glyphicon-user"></i><span class="hidden-sm hidden-xs"> admin</span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Perfil</a></li>
+                <li class="divider"></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </div>
+        <!-- fim do menu -->
+
+        <ul class="collapse navbar-collapse nav navbar-nav top-menu">
+            <li><a href="#"><i class="glyphicon glyphicon-globe"></i> Visitar Site</a></li>
+
+
+        </ul>
+
+    </div>
+
+</div>
+<!-- Fim barra superior -->
+
+
+<div class="ch-container">
+
+    <div class="row">
+
+        <!-- inicio menu esquerdo -->
+
+        <div class="col-sm-2 col-lg-2">
+            <div class="sidebar-nav">
+                <div class="nav-canvas">
+                    <div class="nav-sm nav nav-stacked">
+
+                    </div>
+                    <ul class="nav nav-pills nav-stacked main-menu">
+
+                        <li class="nav-header">Principal</li>
+
+                        <li><a class="ajax-link" href="index.html"><i class="glyphicon glyphicon-home"></i><span> Página 01</span></a></li>
+                        <li><a class="ajax-link" href="#"><i class="glyphicon glyphicon-eye-open"></i><span> Página 02</span></a></li>
+                        <li><a class="ajax-link" href="#"><i class="glyphicon glyphicon-edit"></i><span> Página 03</span></a></li>
+                        <li><a class="ajax-link" href="#"><i class="glyphicon glyphicon-list-alt"></i><span> Página 04</span></a></li>
+
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+
+        <!-- Fim do menu esquerdo -->
+
+        <noscript>
+            <div class="alert alert-block col-md-12">
+                <h4 class="alert-heading">Atenção!</h4>
+
+                <p>Você precisa ter <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+                    ativo para usar este site.</p>
+            </div>
+        </noscript>
+
+        <div id="content" class="col-lg-10 col-sm-10">
+
+            <!-- inicio aré de conteudo -->
+
+            <!-- LINHA PARA MOSTRAR DIRETÓRIO -->
+            <div>
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Principal</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- FIM LINHA DE DIRETORIO -->
+
+
+            <!-- LINHA OPCIONAL PARA MOSTRAR MENSAGENS -->
+
+            <div class=" row">
+
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <a data-toggle="tooltip" title="6 novos usuários." class="well top-block" href="#">
+                        <i class="glyphicon glyphicon-user blue"></i>
+
+                        <div>Total de Usuários</div>
+                        <div>507</div>
+                        <span class="notification">6</span>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <a data-toggle="tooltip" title="4 novos lojistas." class="well top-block" href="#">
+                        <i class="glyphicon glyphicon-star green"></i>
+
+                        <div>Lojistas</div>
+                        <div>228</div>
+                        <span class="notification green">4</span>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <a data-toggle="tooltip" title="R$50 novas vendas." class="well top-block" href="#">
+                        <i class="glyphicon glyphicon-shopping-cart yellow"></i>
+
+                        <div>Vendas</div>
+                        <div>R$ 1320,00</div>
+                        <span class="notification yellow">R$50</span>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <a data-toggle="tooltip" title="12 novas mensagens." class="well top-block" href="#">
+                        <i class="glyphicon glyphicon-envelope red"></i>
+
+                        <div>Mensagens</div>
+                        <div>25</div>
+                        <span class="notification red">12</span>
+                    </a>
+                </div>
+            </div>
+            <!-- FIM DA LINHA OPCIONAL PARA MOSTRAR MENSAGENS -->
+
+            <!-- INICIO DOS BOXES DE CONTEUDOS -->
+
+            <div class="row">
+                <div class="box col-md-12">
+                    <div class="box-inner">
+
+                        <!-- BOX INTRODUÇÃO -->
+                        <div class="box-header well">
+                            <h2><i class="glyphicon glyphicon-info-sign"></i> Introdução</h2>
+
+
+                            <!-- botoes de esconder / minimizar e fechar -->
+                            <div class="box-icon">
+                                <a href="#" class="btn btn-setting btn-round btn-default"><i class="glyphicon glyphicon-cog"></i></a>
+                                <a href="#" class="btn btn-minimize btn-round btn-default"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a href="#" class="btn btn-close btn-round btn-default"><i class="glyphicon glyphicon-remove"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="box-content row">
+                            <div class="col-lg-7 col-md-12">
+                                <h1>BID <br>
+                                    <small>Seja bem vindo ao sistema administrativo do portal BID.</small>
+                                </h1>
+                                <p>TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO
+                                    TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO
+                                    :)</p>
+
+                                <p><b>JILLES: estou com uma coletanea de boxes funcionais aqui. Só dizer o que precisa que eu vejo se tenho aqui.</b></p>
+
+
+                                <p class="center-block download-buttons">
+                                    <a href="#" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-chevron-left glyphicon-white"></i> BOTAO 1 (?)</a>
+                                    <a href="#" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-download-alt"></i> BOTAO 2 (?)</a>
+                                </p>
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+           <!-- INICIO BOXES LINHA 01 -->
+            <div class="row">
+                <div class="box col-md-4">
+                    <div class="box-inner homepage-box">
+                        <div class="box-header well">
+                            <h2><i class="glyphicon glyphicon-th"></i> BOX 01</h2>
+
+                            <div class="box-icon">
+                                <a href="#" class="btn btn-setting btn-round btn-default"><i class="glyphicon glyphicon-cog"></i></a>
+                                <a href="#" class="btn btn-minimize btn-round btn-default"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a href="#" class="btn btn-close btn-round btn-default"><i class="glyphicon glyphicon-remove"></i></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!--/span-->
+
+                <div class="box col-md-4">
+                    <div class="box-inner homepage-box">
+                        <div class="box-header well">
+                            <h2><i class="glyphicon glyphicon-th"></i> BOX 01</h2>
+
+                            <div class="box-icon">
+                                <a href="#" class="btn btn-setting btn-round btn-default"><i class="glyphicon glyphicon-cog"></i></a>
+                                <a href="#" class="btn btn-minimize btn-round btn-default"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a href="#" class="btn btn-close btn-round btn-default"><i class="glyphicon glyphicon-remove"></i></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!--/span-->
+
+                <div class="box col-md-4">
+                    <div class="box-inner homepage-box">
+                        <div class="box-header well">
+                            <h2><i class="glyphicon glyphicon-th"></i> BOX 01</h2>
+
+                            <div class="box-icon">
+                                <a href="#" class="btn btn-setting btn-round btn-default"><i class="glyphicon glyphicon-cog"></i></a>
+                                <a href="#" class="btn btn-minimize btn-round btn-default"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a href="#" class="btn btn-close btn-round btn-default"><i class="glyphicon glyphicon-remove"></i></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!--/span-->
+            </div><!--/row-->
+
+            <!-- FIM BOXES LINHA 01 -->
+
+    <hr>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h3>Configurações</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Aqui os settings podem ser configurados...</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-default" data-dismiss="modal">Fechar</a>
+                    <a href="#" class="btn btn-primary" data-dismiss="modal">Salvar alterações</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="row">
+        <p class="col-md-9 col-sm-9 col-xs-12 copyright">&copy; <a href="#" target="_blank">Portal Bid</a> 2016</p>
+
+        <p class="col-md-3 col-sm-3 col-xs-12 powered-by">Todos os direitos reservados: <a href="#">Bid</a></p>
+    </footer>
+
+</div><!--/.fluid-container-->
+
+<!-- external javascript -->
+
+<script src="../../../../../../../Downloads/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- library for cookie management -->
+<script src="../../../../../../../Downloads/admin/js/jquery.cookie.js"></script>
+<!-- calender plugin -->
+<script src='../../../../../../../Downloads/admin/bower_components/moment/min/moment.min.js'></script>
+<script src='../../../../../../../Downloads/admin/bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
+<!-- data table plugin -->
+<script src='../../../../../../../Downloads/admin/js/jquery.dataTables.min.js'></script>
+
+<!-- select or dropdown enhancer -->
+<script src="../../../../../../../Downloads/admin/bower_components/chosen/chosen.jquery.min.js"></script>
+<!-- plugin for gallery image view -->
+<script src="../../../../../../../Downloads/admin/bower_components/colorbox/jquery.colorbox-min.js"></script>
+<!-- notification plugin -->
+<script src="../../../../../../../Downloads/admin/js/jquery.noty.js"></script>
+<!-- library for making tables responsive -->
+<script src="../../../../../../../Downloads/admin/bower_components/responsive-tables/responsive-tables.js"></script>
+<!-- tour plugin -->
+<script src="../../../../../../../Downloads/admin/bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+<!-- star rating plugin -->
+<script src="../../../../../../../Downloads/admin/js/jquery.raty.min.js"></script>
+<!-- for iOS style toggle switch -->
+<script src="../../../../../../../Downloads/admin/js/jquery.iphone.toggle.js"></script>
+<!-- autogrowing textarea plugin -->
+<script src="../../../../../../../Downloads/admin/js/jquery.autogrow-textarea.js"></script>
+<!-- multiple file upload plugin -->
+<script src="../../../../../../../Downloads/admin/js/jquery.uploadify-3.1.min.js"></script>
+<!-- history.js for cross-browser state change on ajax -->
+<script src="../../../../../../../Downloads/admin/js/jquery.history.js"></script>
+<!-- application script for Charisma demo -->
+<script src="../../../../../../../Downloads/admin/js/charisma.js"></script>
+
+
+</body>
+</html>
