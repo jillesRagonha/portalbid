@@ -19,7 +19,10 @@
     <!-- Folhas de Estilo -->
 
 
-    <h:outputStylesheet library="admin" name="css/bootstrap-cerulean.min.css"/>
+    <h:outputStylesheet library="admin" name="css/bootstrap-cerulean.min.css" id="bs-css"/>
+    <h:outputStylesheet library="admin" name="css/main.css" />
+
+    <!--<link id="bs-css" href="#{request.contextPath}/resources/admin/css/bootstrap-cerulean.min.css" rel="stylesheet" />-->
     <h:outputStylesheet library="admin" name="css/charisma-app.css"/>
     <h:outputStylesheet library="admin" name="bower_components/fullcalendar/dist/fullcalendar.css"/>
     <h:outputStylesheet library="admin" name="bower_components/fullcalendar/dist/fullcalendar.print.css"/>
@@ -181,7 +184,7 @@
 
                     <div class="col-md-3 col-sm-3 col-xs-6">
                         <a data-toggle="tooltip" title="R$50 novas vendas." class="well top-block" href="#">
-                            <i class="glyphicon glyphicon-shopping-cart yellow"></i>
+                            <i class="glyphicon glyphicon-shopping-cart yellow "></i>
 
                             <div>Vendas</div>
                             <div>R$ 1320,00</div>
@@ -192,7 +195,6 @@
                     <div class="col-md-3 col-sm-3 col-xs-6">
                         <a data-toggle="tooltip" title="12 novas mensagens." class="well top-block" href="#">
                             <i class="glyphicon glyphicon-envelope red"></i>
-
                             <div>Mensagens</div>
                             <div>25</div>
                             <span class="notification red">12</span>
@@ -354,38 +356,36 @@
 
     <!-- external javascript -->
 
-    <script src="../../../../../../../Downloads/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <h:outputScript library="admin" name="bower_components/bootstrap/dist/js/bootstrap.min.js"/>
     <!-- library for cookie management -->
-    <script src="../../../../../../../Downloads/admin/js/jquery.cookie.js"></script>
+    <h:outputScript library="admin" name="js/jquery.cookie.js"/>
     <!-- calender plugin -->
-    <script src='../../../../../../../Downloads/admin/bower_components/moment/min/moment.min.js'></script>
-    <script src='../../../../../../../Downloads/admin/bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
+    <h:outputScript library="admin" name="bower_components/moment/min/moment.min.js"/>
+    <h:outputScript library="admin" name="bower_components/fullcalendar/dist/fullcalendar.min.js"/>
     <!-- data table plugin -->
-    <script src='../../../../../../../Downloads/admin/js/jquery.dataTables.min.js'></script>
-
+    <h:outputScript library="admin" name="js/jquery.dataTables.min.js"/>
     <!-- select or dropdown enhancer -->
-    <script src="../../../../../../../Downloads/admin/bower_components/chosen/chosen.jquery.min.js"></script>
+    <h:outputScript library="admin" name="bower_components/chosen/chosen.jquery.min.js"/>
     <!-- plugin for gallery image view -->
-    <script src="../../../../../../../Downloads/admin/bower_components/colorbox/jquery.colorbox-min.js"></script>
+    <h:outputScript library="admin" name="bower_components/colorbox/jquery.colorbox-min.js"/>
     <!-- notification plugin -->
-    <script src="../../../../../../../Downloads/admin/js/jquery.noty.js"></script>
+    <h:outputScript library="admin" name="js/jquery.noty.js"/>
     <!-- library for making tables responsive -->
-    <script src="../../../../../../../Downloads/admin/bower_components/responsive-tables/responsive-tables.js"></script>
+    <h:outputScript library="admin" name="bower_components/responsive-tables/responsive-tables.js"/>
     <!-- tour plugin -->
-    <script src="../../../../../../../Downloads/admin/bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+    <h:outputScript library="admin" name="bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"/>
     <!-- star rating plugin -->
-    <script src="../../../../../../../Downloads/admin/js/jquery.raty.min.js"></script>
+    <h:outputScript library="admin" name="js/jquery.raty.min.js"/>
     <!-- for iOS style toggle switch -->
-    <script src="../../../../../../../Downloads/admin/js/jquery.iphone.toggle.js"></script>
+    <h:outputScript library="admin" name="js/jquery.iphone.toggle.js"/>
     <!-- autogrowing textarea plugin -->
-    <script src="../../../../../../../Downloads/admin/js/jquery.autogrow-textarea.js"></script>
+    <h:outputScript library="admin" name="js/jquery.autogrow-textarea.js"/>
     <!-- multiple file upload plugin -->
-    <script src="../../../../../../../Downloads/admin/js/jquery.uploadify-3.1.min.js"></script>
+    <h:outputScript library="admin" name="js/jquery.uploadify-3.1.min.js"/>
     <!-- history.js for cross-browser state change on ajax -->
-    <script src="../../../../../../../Downloads/admin/js/jquery.history.js"></script>
+    <h:outputScript library="admin" name="js/jquery.history.js"/>
     <!-- application script for Charisma demo -->
-    <script src="../../../../../../../Downloads/admin/js/charisma.js"></script>
+    <h:outputScript library="admin" name="js/charisma.js"/>
 
 
 </h:body>
