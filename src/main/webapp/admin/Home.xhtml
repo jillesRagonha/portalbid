@@ -20,7 +20,7 @@
 
 
     <h:outputStylesheet library="admin" name="css/bootstrap-cerulean.min.css" id="bs-css"/>
-    <h:outputStylesheet library="admin" name="css/main.css" />
+
 
     <!--<link id="bs-css" href="#{request.contextPath}/resources/admin/css/bootstrap-cerulean.min.css" rel="stylesheet" />-->
     <h:outputStylesheet library="admin" name="css/charisma-app.css"/>
@@ -84,7 +84,11 @@
             <!-- fim do menu -->
 
             <ul class="collapse navbar-collapse nav navbar-nav top-menu">
-                <li><a href="#"><i class="glyphicon glyphicon-globe"></i> Visitar Site</a></li>
+                <li>
+                    <h:link id="link_test" outcome="Login" >
+                        <span class="glyphicon glyphicon-globe"></span> Visitar Site
+                    </h:link>
+                </li>
 
 
             </ul>
