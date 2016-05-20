@@ -13,11 +13,11 @@ import javax.inject.Named;
 @Named
 @RequestScoped
 public class LoginMB {
-    @Inject
+
     private UsuarioLogadoMB usuarioLogadoMB;
-    @Inject
+
     private UsuarioDao dao;
-    @Inject
+
     private Usuario usuario;
 
     public String efetuarLogin(){

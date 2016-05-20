@@ -4,7 +4,6 @@ import br.com.agilles.portalbid.dao.UsuarioDao;
 import br.com.agilles.portalbid.models.Usuario;
 
 import javax.enterprise.context.RequestScoped;
-import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 
@@ -15,9 +14,8 @@ import java.io.Serializable;
 @RequestScoped
 public class UsuarioMB implements Serializable {
 
-    @Inject
     Usuario usuario;
-    @Inject
+
     UsuarioDao dao;
 
     public Usuario getUsuario() {

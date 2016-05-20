@@ -1,6 +1,7 @@
 package br.com.agilles.portalbid.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 /**
  * Created by Jilles Ragonha on 03/05/2016.
@@ -10,7 +11,6 @@ public class Lojista {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
     private String nomeLojista;
     private String documento;
     private String telefoneComercial;

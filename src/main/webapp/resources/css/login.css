@@ -284,36 +284,36 @@ body {
 }
 
 .header-submenu-item_iconDiscussions {
-    background-image: url(/images/gnarus/header/icon-discussions.svg);
+    background-image: url(/resources/images/gnarus/header/icon-discussions.svg);
     background-size: 2.3em
 }
 
 .header-submenu-item_iconForum {
-    background-image: url(/images/gnarus/header/icon-forum.svg)
+    background-image: url(/resources/images/gnarus/header/icon-forum.svg)
 }
 
 .header-submenu-item_iconRanking {
-    background-image: url(/images/gnarus/header/icon-ranking.svg)
+    background-image: url(/resources/images/gnarus/header/icon-ranking.svg)
 }
 
 .header-submenu-item_iconProfileView {
-    background-image: url(/images/gnarus/header/icon-profile-view.svg)
+    background-image: url(/resources/images/gnarus/header/icon-profile-view.svg)
 }
 
 .header-submenu-item_iconCertificate {
-    background-image: url(/images/gnarus/header/icon-certificate.svg)
+    background-image: url(/resources/images/gnarus/header/icon-certificate.svg)
 }
 
 .header-submenu-item_iconJobs {
-    background-image: url(/images/gnarus/header/icon-jobs.svg)
+    background-image: url(/resources/images/gnarus/header/icon-jobs.svg)
 }
 
 .header-submenu-item_iconModerators {
-    background-image: url(/images/gnarus/header/icon-moderators.svg)
+    background-image: url(/resources/images/gnarus/header/icon-moderators.svg)
 }
 
 .header-submenu-item_iconMyCourses {
-    background-image: url(/images/gnarus/header/icon-myCourses.svg)
+    background-image: url(/resources/images/gnarus/header/icon-myCourses.svg)
 }
 
 .header-profile-item-name {
@@ -321,27 +321,27 @@ body {
 }
 
 .header-submenu-item_iconPaths {
-    background-image: url(/images/gnarus/header/icon-paths.svg)
+    background-image: url(/resources/images/gnarus/header/icon-paths.svg)
 }
 
 .header-submenu-item_iconNewCourses {
-    background-image: url(/images/gnarus/header/icon-newCourses.svg)
+    background-image: url(/resources/images/gnarus/header/icon-newCourses.svg)
 }
 
 .header-submenu-item_iconProfileEdit {
-    background-image: url(/images/gnarus/header/icon-profile-edit.svg)
+    background-image: url(/resources/images/gnarus/header/icon-profile-edit.svg)
 }
 
 .header-submenu-item_iconProfileAcquirements {
-    background-image: url(/images/gnarus/header/icon-myPayments.svg)
+    background-image: url(/resources/images/gnarus/header/icon-myPayments.svg)
 }
 
 .header-submenu-item_iconLogout {
-    background-image: url(/images/gnarus/header/icon-logout.svg)
+    background-image: url(/resources/images/gnarus/header/icon-logout.svg)
 }
 
 .header-submenu-item_iconFeed {
-    background-image: url(/images/gnarus/header/icon-feeds.svg)
+    background-image: url(/resources/images/gnarus/header/icon-feeds.svg)
 }
 
 .header-submenuable {
@@ -359,7 +359,7 @@ body {
     -webkit-order: 2;
     -ms-flex-order: 2;
     order: 2;
-    background: url(/images/gnarus/header/menu-arrow-down.svg) center bottom no-repeat;
+    background: url(/resources/images/gnarus/header/menu-arrow-down.svg) center bottom no-repeat;
     display: inline-block;
     margin-left: .5em;
     width: 10px;
@@ -374,7 +374,7 @@ body {
 }
 
 .header-submenuable:focus .header-submenuable-seta:after, .header-submenuable:focus:after, .header-submenuable:hover .header-submenuable-seta:after, .header-submenuable:hover:after {
-    background-image: url(/images/gnarus/header/menu-arrow-down-active.svg)
+    background-image: url(/resources/images/gnarus/header/menu-arrow-down-active.svg)
 }
 
 .header-submenu {
@@ -589,7 +589,7 @@ body {
     border-radius: 50%;
     background-position: center;
     background-size: 25%;
-    background-image: url(/images/gnarus/paginator/arrow-form-light-right.svg)
+    background-image: url(/resources/images/gnarus/paginator/arrow-form-light-right.svg)
 }
 
 .paginator-link-before:before {
@@ -695,7 +695,7 @@ body {
 
 .courseLogo-finished:after {
     content: "";
-    background-image: url(/images/gnarus/header/icon-course-complete.svg);
+    background-image: url(/resources/images/gnarus/header/icon-course-complete.svg);
     width: 20%;
     height: 20%;
     position: absolute;
@@ -914,7 +914,7 @@ body {
 }
 
 .courseDetailBox-pauseRegistration-button:before {
-    content: url(/images/gnarus/icon-pause.svg);
+    content: url(/resources/images/gnarus/icon-pause.svg);
     position: relative;
     margin-right: .4em;
     top: 5px
@@ -1132,7 +1132,7 @@ body {
     top: 0;
     height: 100%;
     width: 10px;
-    background: url(/images/gnarus/buttonAction/button-arrow-right.svg) center center no-repeat
+    background: url(/resources/images/gnarus/buttonAction/button-arrow-right.svg) center center no-repeat
 }
 
 .buttonBlue {
@@ -1735,7 +1735,7 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url(/images/gnarus/header/menu-arrow-down.svg) right 4% top 50%/1em no-repeat #FFF;
+    background: url(/resources/images/gnarus/header/menu-arrow-down.svg) right 4% top 50%/1em no-repeat #FFF;
     border-radius: 2px;
     line-height: 1.2;
     padding: .5em 12% .5em .5%;
@@ -1909,7 +1909,7 @@ body {
 }
 
 .forumDiscussions-title:before {
-    background-image: url(/images/gnarus/discussions/icon-forum.svg);
+    background-image: url(/resources/images/gnarus/discussions/icon-forum.svg);
     content: '';
     background-repeat: no-repeat;
     -webkit-align-self: center;
@@ -2495,11 +2495,11 @@ body {
 }
 
 .sectionMenu-item[data-type=video][data-done=true] {
-    background-image: url(/images/gnarus/sectionMenu/icon-section-video-active.svg)
+    background-image: url(/resources/images/gnarus/sectionMenu/icon-section-video-active.svg)
 }
 
 .sectionMenu-item[data-type=video][data-done=false] {
-    background-image: url(/images/gnarus/sectionMenu/icon-section-video.svg)
+    background-image: url(/resources/images/gnarus/sectionMenu/icon-section-video.svg)
 }
 
 .sectionMenu-item[data-type=music] {
@@ -2508,11 +2508,11 @@ body {
 }
 
 .sectionMenu-item[data-type=music][data-done=true] {
-    background-image: url(/images/gnarus/sectionMenu/icon-exercise-music-active.svg)
+    background-image: url(/resources/images/gnarus/sectionMenu/icon-exercise-music-active.svg)
 }
 
 .sectionMenu-item[data-type=music][data-done=false] {
-    background-image: url(/images/gnarus/sectionMenu/icon-exercise-music.svg)
+    background-image: url(/resources/images/gnarus/sectionMenu/icon-exercise-music.svg)
 }
 
 .sectionMenu-item[data-type=explanation] {
@@ -2521,11 +2521,11 @@ body {
 }
 
 .sectionMenu-item[data-type=explanation][data-done=true] {
-    background-image: url(/images/gnarus/sectionMenu/icon-section-explanation-active.svg)
+    background-image: url(/resources/images/gnarus/sectionMenu/icon-section-explanation-active.svg)
 }
 
 .sectionMenu-item[data-type=explanation][data-done=false] {
-    background-image: url(/images/gnarus/sectionMenu/icon-section-explanation.svg)
+    background-image: url(/resources/images/gnarus/sectionMenu/icon-section-explanation.svg)
 }
 
 .sectionMenu-item[data-type=noanswer], .sectionMenu-item[data-type=text] {
@@ -2534,11 +2534,11 @@ body {
 }
 
 .sectionMenu-item[data-type=noanswer][data-done=true], .sectionMenu-item[data-type=text][data-done=true] {
-    background-image: url(/images/gnarus/sectionMenu/icon-exercise-text-active.svg)
+    background-image: url(/resources/images/gnarus/sectionMenu/icon-exercise-text-active.svg)
 }
 
 .sectionMenu-item[data-type=noanswer][data-done=false], .sectionMenu-item[data-type=text][data-done=false] {
-    background-image: url(/images/gnarus/sectionMenu/icon-exercise-text.svg)
+    background-image: url(/resources/images/gnarus/sectionMenu/icon-exercise-text.svg)
 }
 
 .sectionMenu-item[data-type=multiple] {
@@ -2547,11 +2547,11 @@ body {
 }
 
 .sectionMenu-item[data-type=multiple][data-done=true] {
-    background-image: url(/images/gnarus/sectionMenu/icon-exercise-multiple-active.svg)
+    background-image: url(/resources/images/gnarus/sectionMenu/icon-exercise-multiple-active.svg)
 }
 
 .sectionMenu-item[data-type=multiple][data-done=false] {
-    background-image: url(/images/gnarus/sectionMenu/icon-exercise-multiple.svg)
+    background-image: url(/resources/images/gnarus/sectionMenu/icon-exercise-multiple.svg)
 }
 
 .sectionMenu-item[data-type=code] {
@@ -2560,11 +2560,11 @@ body {
 }
 
 .sectionMenu-item[data-type=code][data-done=true] {
-    background-image: url(/images/gnarus/sectionMenu/icon-exercise-code-active.svg)
+    background-image: url(/resources/images/gnarus/sectionMenu/icon-exercise-code-active.svg)
 }
 
 .sectionMenu-item[data-type=code][data-done=false] {
-    background-image: url(/images/gnarus/sectionMenu/icon-exercise-code.svg)
+    background-image: url(/resources/images/gnarus/sectionMenu/icon-exercise-code.svg)
 }
 
 .sectionMenu-navigationSection {
@@ -2809,7 +2809,7 @@ output.formattedText pre {
 }
 
 .starRating-star-label {
-    background: url(/images/gnarus/starRating/estrela-mask.svg) center center/cover no-repeat #EBEBEB;
+    background: url(/resources/images/gnarus/starRating/estrela-mask.svg) center center/cover no-repeat #EBEBEB;
     display: inline-block;
     height: 1.5em;
     width: 1.5em;
@@ -2987,7 +2987,7 @@ output.formattedText pre {
     outline: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: url(/images/gnarus/header/menu-arrow-down.svg) right 4% top 50%/1em no-repeat #606B6C;
+    background: url(/resources/images/gnarus/header/menu-arrow-down.svg) right 4% top 50%/1em no-repeat #606B6C;
     border-radius: 2px;
     color: #DBE2E2;
     font-size: 16px;
@@ -3153,21 +3153,21 @@ output.formattedText pre {
 }
 
 .advantages-icon-calendar:before {
-    background-image: url(/images/gnarus/unloggedHome/signup/advantages-calendar.svg)
+    background-image: url(/resources/images/gnarus/unloggedHome/signup/advantages-calendar.svg)
 }
 
 .advantages-icon-computerNight:before {
-    background-image: url(/images/gnarus/unloggedHome/signup/advantages-computerNight.svg);
+    background-image: url(/resources/images/gnarus/unloggedHome/signup/advantages-computerNight.svg);
     height: 25px;
     width: 25px
 }
 
 .advantages-icon-certify:before {
-    background-image: url(/images/gnarus/unloggedHome/signup/advantages-certify.svg)
+    background-image: url(/resources/images/gnarus/unloggedHome/signup/advantages-certify.svg)
 }
 
 .advantages-icon-rotation:before {
-    background-image: url(/images/gnarus/unloggedHome/signup/advantages-rotation.svg)
+    background-image: url(/resources/images/gnarus/unloggedHome/signup/advantages-rotation.svg)
 }
 
 .signup-cards {
@@ -3248,11 +3248,11 @@ output.formattedText pre {
 }
 
 .negativeCheck:before {
-    background-image: url(/images/gnarus/unloggedHome/signup/wrongIcon.svg)
+    background-image: url(/resources/images/gnarus/unloggedHome/signup/wrongIcon.svg)
 }
 
 .positiveCheck:before {
-    background-image: url(/images/gnarus/unloggedHome/signup/correctIcon.svg)
+    background-image: url(/resources/images/gnarus/unloggedHome/signup/correctIcon.svg)
 }
 
 .signup-card-info-item {
@@ -3495,7 +3495,7 @@ output.formattedText pre {
 
 .aluraFooter-powered:before {
     content: "";
-    background: url(/images/gnarus/unloggedHome/logos/logo-black.svg) no-repeat;
+    background: url(/resources/images/gnarus/unloggedHome/logos/logo-black.svg) no-repeat;
     display: block;
     width: 85px;
     height: 40px
@@ -3813,7 +3813,7 @@ output.formattedText pre {
 
 .profile-editProfile-text:before {
     content: "";
-    background: url(/images/gnarus/profile/icon-profile-edit.svg);
+    background: url(/resources/images/gnarus/profile/icon-profile-edit.svg);
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -3909,7 +3909,7 @@ output.formattedText pre {
 }
 
 .headerList-number.headerList-finished:before {
-    background: url(/images/gnarus/profile/icon-profile-finishedCourse.svg)
+    background: url(/resources/images/gnarus/profile/icon-profile-finishedCourse.svg)
 }
 
 .headerList-score-link {
@@ -3917,15 +3917,15 @@ output.formattedText pre {
 }
 
 .headerList-number.headerList-answers:before {
-    background: url(/images/gnarus/profile/icon-profile-exerciseSolved.svg)
+    background: url(/resources/images/gnarus/profile/icon-profile-exerciseSolved.svg)
 }
 
 .headerList-number.headerList-posts:before {
-    background: url(/images/gnarus/profile/icon-profile-replies.svg)
+    background: url(/resources/images/gnarus/profile/icon-profile-replies.svg)
 }
 
 .headerList-number.headerList-points:before {
-    background: url(/images/gnarus/profile/icon-profile-points.svg)
+    background: url(/resources/images/gnarus/profile/icon-profile-points.svg)
 }
 
 .profile-content-headerList-score {
@@ -4036,7 +4036,7 @@ output.formattedText pre {
     height: 25px;
     width: 25px;
     display: block;
-    background: url(/images/gnarus/profile/icon-certificate.svg);
+    background: url(/resources/images/gnarus/profile/icon-certificate.svg);
     border-radius: 50%
 }
 
@@ -4305,7 +4305,7 @@ div#linechart_material div div {
 
 .btn-facebook-login:before {
     content: "";
-    background: url(/images/base/home-sprites.png) -228px -72px no-repeat;
+    background: url(/resources/images/base/home-sprites.png) -228px -72px no-repeat;
     display: inline-block;
     height: 33px;
     padding-right: .2em;
@@ -4486,7 +4486,7 @@ div#linechart_material div div {
 
 .subscription-login:before {
     content: "";
-    background: url(/images/subscription/megaphone.png) 0 -3px no-repeat;
+    background: url(/resources/images/subscription/megaphone.png) 0 -3px no-repeat;
     display: inline-block;
     vertical-align: middle;
     height: 46px;

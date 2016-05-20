@@ -12,6 +12,7 @@ import java.util.List;
  */
 public class UsuarioDao extends AbstractDAO<Usuario> {
 
+
     EntityManager entityManager = new JPAUtil().getEntityManager();
 
     public boolean salvar(Usuario objeto) {

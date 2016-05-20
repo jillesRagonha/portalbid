@@ -19,27 +19,27 @@
     <!-- Folhas de Estilo -->
 
 
-    <h:outputStylesheet library="admin" name="css/bootstrap-cerulean.min.css" id="bs-css"/>
-
+    <h:outputStylesheet library="css" name="bootstrap-cerulean.min.css" id="bs-css"/>
+    <h:outputStylesheet library="css" name="main.css" />
 
     <!--<link id="bs-css" href="#{request.contextPath}/resources/admin/css/bootstrap-cerulean.min.css" rel="stylesheet" />-->
-    <h:outputStylesheet library="admin" name="css/charisma-app.css"/>
-    <h:outputStylesheet library="admin" name="bower_components/fullcalendar/dist/fullcalendar.css"/>
-    <h:outputStylesheet library="admin" name="bower_components/fullcalendar/dist/fullcalendar.print.css"/>
-    <h:outputStylesheet library="admin" name="bower_components/chosen/chosen.min.css"/>
-    <h:outputStylesheet library="admin" name="bower_components/colorbox/example3/colorbox.css"/>
-    <h:outputStylesheet library="admin" name="bower_components/responsive-tables/responsive-tables.css"/>
-    <h:outputStylesheet library="admin" name="bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css"/>
-    <h:outputStylesheet library="admin" name="css/jquery.noty.css"/>
-    <h:outputStylesheet library="admin" name="css/noty_theme_default.css"/>
-    <h:outputStylesheet library="admin" name="css/elfinder.min.css"/>
-    <h:outputStylesheet library="admin" name="css/elfinder.theme.css"/>
-    <h:outputStylesheet library="admin" name="css/jquery.iphone.toggle.css"/>
-    <h:outputStylesheet library="admin" name="css/uploadify.css"/>
-    <h:outputStylesheet library="admin" name="css/animate.min.css"/>
+    <h:outputStylesheet library="css" name="charisma-app.css"/>
+    <h:outputStylesheet library="bower_components" name="fullcalendar/dist/fullcalendar.css"/>
+    <h:outputStylesheet library="bower_components" name="fullcalendar/dist/fullcalendar.print.css"/>
+    <h:outputStylesheet library="bower_components" name="chosen/chosen.min.css"/>
+    <h:outputStylesheet library="bower_components" name="colorbox/example3/colorbox.css"/>
+    <h:outputStylesheet library="bower_components" name="responsive-tables/responsive-tables.css"/>
+    <h:outputStylesheet library="bower_components" name="bootstrap-tour/build/css/bootstrap-tour.min.css"/>
+    <h:outputStylesheet library="css" name="jquery.noty.css"/>
+    <h:outputStylesheet library="css" name="noty_theme_default.css"/>
+    <h:outputStylesheet library="css" name="elfinder.min.css"/>
+    <h:outputStylesheet library="css" name="elfinder.theme.css"/>
+    <h:outputStylesheet library="css" name="jquery.iphone.toggle.css"/>
+    <h:outputStylesheet library="css" name="uploadify.css"/>
+    <h:outputStylesheet library="css" name="animate.min.css"/>
 
     <!-- jQuery -->
-    <h:outputScript library="admin" name="bower_components/jquery/jquery.min.js"/>
+    <h:outputScript library="bower_components" name="jquery/jquery.min.js"/>
 
     <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -65,7 +65,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="index.html">
-                <h:graphicImage styleClass="hidden-xs" alt="BID LOGO" library="admin" name="img/bid_logo_peq.jpg"/>
+                <h:graphicImage styleClass="hidden-xs" alt="BID LOGO" library="imagens" name="bid_logo_peq.jpg"/>
                 <span>BID Admin</span></a>
 
             <!-- menu de admin / perfil e logout -->
@@ -245,9 +245,9 @@
 
                                     <p class="center-block download-buttons">
                                         <a href="#" class="btn btn-primary btn-lg"><i
-                                                class="glyphicon glyphicon-chevron-left glyphicon-white"></i> BOTAO 1 (?)</a>
+                                                class="glyphicon glyphicon-chevron-left glyphicon-white"></i> BOTAO 1</a>
                                         <a href="#" class="btn btn-default btn-lg"><i
-                                                class="glyphicon glyphicon-download-alt"></i> BOTAO 2 (?)</a>
+                                                class="glyphicon glyphicon-download-alt"></i> BOTAO 2</a>
                                     </p>
 
                                 </div>
@@ -360,36 +360,36 @@
 
     <!-- external javascript -->
 
-    <h:outputScript library="admin" name="bower_components/bootstrap/dist/js/bootstrap.min.js"/>
+    <h:outputScript library="bower_components" name="bootstrap/dist/js/bootstrap.min.js"/>
     <!-- library for cookie management -->
-    <h:outputScript library="admin" name="js/jquery.cookie.js"/>
+    <h:outputScript library="js" name="jquery.cookie.js"/>
     <!-- calender plugin -->
-    <h:outputScript library="admin" name="bower_components/moment/min/moment.min.js"/>
-    <h:outputScript library="admin" name="bower_components/fullcalendar/dist/fullcalendar.min.js"/>
+    <h:outputScript library="bower_components" name="moment/min/moment.min.js"/>
+    <h:outputScript library="bower_components" name="fullcalendar/dist/fullcalendar.min.js"/>
     <!-- data table plugin -->
-    <h:outputScript library="admin" name="js/jquery.dataTables.min.js"/>
+    <h:outputScript library="js" name="jquery.dataTables.min.js"/>
     <!-- select or dropdown enhancer -->
-    <h:outputScript library="admin" name="bower_components/chosen/chosen.jquery.min.js"/>
+    <h:outputScript library="bower_components" name="chosen/chosen.jquery.min.js"/>
     <!-- plugin for gallery image view -->
-    <h:outputScript library="admin" name="bower_components/colorbox/jquery.colorbox-min.js"/>
+    <h:outputScript library="bower_components" name="colorbox/jquery.colorbox-min.js"/>
     <!-- notification plugin -->
-    <h:outputScript library="admin" name="js/jquery.noty.js"/>
+    <h:outputScript library="js" name="jquery.noty.js"/>
     <!-- library for making tables responsive -->
-    <h:outputScript library="admin" name="bower_components/responsive-tables/responsive-tables.js"/>
+    <h:outputScript library="bower_components" name="responsive-tables/responsive-tables.js"/>
     <!-- tour plugin -->
-    <h:outputScript library="admin" name="bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"/>
+    <h:outputScript library="bower_components" name="bootstrap-tour/build/js/bootstrap-tour.min.js"/>
     <!-- star rating plugin -->
-    <h:outputScript library="admin" name="js/jquery.raty.min.js"/>
+    <h:outputScript library="js" name="jquery.raty.min.js"/>
     <!-- for iOS style toggle switch -->
-    <h:outputScript library="admin" name="js/jquery.iphone.toggle.js"/>
+    <h:outputScript library="js" name="jquery.iphone.toggle.js"/>
     <!-- autogrowing textarea plugin -->
-    <h:outputScript library="admin" name="js/jquery.autogrow-textarea.js"/>
+    <h:outputScript library="js" name="jquery.autogrow-textarea.js"/>
     <!-- multiple file upload plugin -->
-    <h:outputScript library="admin" name="js/jquery.uploadify-3.1.min.js"/>
+    <h:outputScript library="js" name="jquery.uploadify-3.1.min.js"/>
     <!-- history.js for cross-browser state change on ajax -->
-    <h:outputScript library="admin" name="js/jquery.history.js"/>
+    <h:outputScript library="js" name="jquery.history.js"/>
     <!-- application script for Charisma demo -->
-    <h:outputScript library="admin" name="js/charisma.js"/>
+    <h:outputScript library="js" name="charisma.js"/>
 
 
 </h:body>
